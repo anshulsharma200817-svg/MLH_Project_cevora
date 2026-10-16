@@ -1,4 +1,4 @@
-import { getMapLayoutRecommendations } from '@/lib/gemini';
+import { getMapLayoutRecommendations } from '@/lib/gemma';
 import { NextRequest, NextResponse } from 'next/server';
 
 export async function POST(request: NextRequest) {

@@ -1,4 +1,4 @@
-import { getMapMonitoringInsights } from '@/lib/gemini';
+import { getMapMonitoringInsights } from '@/lib/gemma';
 import { NextRequest, NextResponse } from 'next/server';
 
 export async function POST(request: NextRequest) {
