@@ -14,7 +14,8 @@ import {
 } from '@/components/ui/select';
 import { Separator } from '@/components/ui/separator';
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
-import { Menu, Zap } from 'lucide-react';
+import { Menu } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -40,11 +41,16 @@ export default function Navbar() {
 
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group mr-6">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
-            <Zap className="h-4 w-4 text-primary-foreground" aria-hidden="true" />
-          </div>
+          <Image
+            src="/cevora-logo.png"
+            alt="Cevora"
+            width={32}
+            height={32}
+            priority
+            className="h-8 w-8 object-contain transition-transform duration-200 group-hover:scale-105"
+          />
           <span className="font-semibold text-base tracking-tight group-hover:text-primary transition-colors">
-            {t('Karana')}
+            {t('Cevora')}
           </span>
         </Link>
 
