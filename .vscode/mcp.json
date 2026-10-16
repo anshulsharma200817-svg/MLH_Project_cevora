@@ -1,0 +1,72 @@
+{
+  "inputs": [],
+  "servers": {
+    "github": {
+      "_comment": "GitHub MCP (remote HTTP). Requires GITHUB_TOKEN with repo scope.",
+      "transport": "http",
+      "url": "https://api.githubcopilot.com/mcp",
+      "headers": {
+        "Authorization": "Bearer ${GITHUB_TOKEN}"
+      },
+      "type": "http"
+    },
+    "context7": {
+      "_comment": "Context7 MCP - Enhanced codebase analysis with global API key. Use for superior code understanding, finding related code, and architecture insights.",
+      "command": "npx",
+      "args": ["@context7/mcp-server"],
+      "env": {
+        "CONTEXT7_API_KEY": "ctx7sk-007806c8-d67b-49e6-9fe5-8a882fdc7383",
+        "CONTEXT7_ENABLE_GLOBAL": "true"
+      },
+      "transport": "stdio",
+      "type": "stdio"
+    },
+    "supabase-stdio": {
+      "_comment": "Supabase MCP (local stdio). Needs SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY.",
+      "command": "npx",
+      "args": ["@supabase/mcp-server-supabase"],
+      "env": {
+        "SUPABASE_URL": "${SUPABASE_URL}",
+        "SUPABASE_SERVICE_ROLE_KEY": "${SUPABASE_SERVICE_ROLE_KEY}"
+      },
+      "transport": "stdio",
+      "type": "stdio"
+    },
+    "notion-stdio": {
+      "_comment": "Notion MCP over stdio. Requires NOTION_API_TOKEN.",
+      "command": "npx",
+      "args": ["@modelcontextprotocol/server-notion"],
+      "env": {
+        "NOTION_API_TOKEN": "${NOTION_API_TOKEN}"
+      },
+      "transport": "stdio",
+      "type": "stdio"
+    },
+    "memory": {
+      "_comment": "Memory MCP for persistent context across sessions.",
+      "command": "npx",
+      "args": ["@modelcontextprotocol/server-memory"],
+      "env": {
+        "MCP_MEMORY_STORAGE_PATH": "${MCP_MEMORY_STORAGE_PATH:./.mcp-memory}"
+      },
+      "transport": "stdio",
+      "type": "stdio"
+    },
+    "shadcn": {
+      "_comment": "Shadcn UI MCP for component discovery and installation.",
+      "command": "npx",
+      "args": ["shadcn@latest", "mcp"],
+      "transport": "stdio",
+      "type": "stdio"
+    },
+    "io.github.ChromeDevTools/chrome-devtools-mcp": {
+      "command": "npx",
+      "args": ["-y", "chrome-devtools-mcp"],
+      "env": {},
+      "type": "stdio"
+    }
+  },
+  "registries": {
+    "@react-bits": "https://reactbits.dev/r/{name}.json"
+  }
+}
