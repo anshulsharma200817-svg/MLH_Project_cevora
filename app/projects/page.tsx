@@ -53,8 +53,13 @@ export default function ProjectsPage() {
       const data = await response.json();
 
       // Parse the response and extract report components
-      const reportText = data.monitoring_summary || data.summary || 'Report generated successfully';
-      const recommendations = data.recommended_actions || ['Review and proceed', 'Monitor for challenges', 'Coordinate with departments'];
+      const result: any = data?.result ?? data ?? {};
+      const reportText = result.summary || 'Report generated successfully';
+      const riskLevel = result.risk_level || 'MEDIUM';
+      const recommendations =
+        result.recommended_actions || ['Review and proceed', 'Monitor for challenges', 'Coordinate with departments'];
+      const confidence: 'HIGH' | 'MEDIUM' | 'LOW' =
+        riskLevel === 'HIGH' ? 'HIGH' : riskLevel === 'MEDIUM' ? 'MEDIUM' : 'LOW';
 
       setProjects((prev) => ({
         ...prev,
@@ -64,9 +69,9 @@ export default function ProjectsPage() {
                 ...p,
                 aiReport: {
                   summary: reportText.substring(0, 200),
-                  riskAssessment: `Risk Level: ${data.risk_level || 'MEDIUM'}`,
+                  riskAssessment: `Risk Level: ${riskLevel}`,
                   recommendations: recommendations.slice(0, 2),
-                  confidence: 'HIGH' as const,
+                  confidence,
                 },
               }
             : p

@@ -137,6 +137,12 @@ export function getSequenceOrder(projects: PriorityProject[]): Phase[] {
 
   return [
     {
+      // Emergency repairs bypass the normal queue and run immediately.
+      phase: 'EMERGENCY',
+      label: 'Emergency — Immediate',
+      projects: ranked.filter((p) => p.work_type === 'POTHOLE_REPAIR'),
+    },
+    {
       phase: 'PHASE 1',
       label: 'Do First — Underground Work',
       projects: ranked.filter((p) =>
@@ -154,11 +160,6 @@ export function getSequenceOrder(projects: PriorityProject[]): Phase[] {
       phase: 'PHASE 3',
       label: 'Do Last — Road Sealing',
       projects: ranked.filter((p) => p.work_type === 'ROAD_PAVING'),
-    },
-    {
-      phase: 'EMERGENCY',
-      label: 'Emergency — Immediate',
-      projects: ranked.filter((p) => p.work_type === 'POTHOLE_REPAIR'),
     },
   ];
 }
