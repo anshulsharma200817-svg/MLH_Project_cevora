@@ -83,9 +83,9 @@ const FEATURE_SECTIONS = [
     id: 'reporting',
     label: 'Reporting in Cevora',
     heading: 'AI Risk Scoring. One-Click Reports.',
-    description: 'Submit a tender and get a Groq-powered LLM risk score in under three seconds. Generate compliant NIT PDFs without manual formatting.',
+    description: 'Submit a tender and get a Gemma 4-powered LLM risk score in under three seconds. Generate compliant NIT PDFs without manual formatting.',
     mockupIcon: Brain,
-    mockupLabel: 'AI Risk Engine · Llama 3.1 via Groq',
+    mockupLabel: 'AI Risk Engine · Gemma 4',
     cards: [
       {
         icon: BarChart3,
@@ -99,7 +99,7 @@ const FEATURE_SECTIONS = [
         iconBg: '#E8F0FF',
         iconColor: '#3B5BDB',
         title: 'Custom AI Reporting',
-        body: 'Describe the report you need in plain language; the Groq LLM engine assembles the content, tables, and risk commentary automatically.',
+        body: 'Describe the report you need in plain language; the Gemma 4 engine assembles the content, tables, and risk commentary automatically.',
       },
       {
         icon: Mic,

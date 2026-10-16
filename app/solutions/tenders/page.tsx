@@ -25,7 +25,7 @@ const FEATURE_CARDS = [
     iconBg: '#E8F0FF',
     iconColor: '#3B5BDB',
     title: 'AI-Powered Risk Scoring',
-    body: 'Groq LLM engine analyzes tender documents in < 3 seconds, detecting cost risks, timeline red flags, and contractor reputation issues.',
+    body: 'Gemma 4 engine analyzes tender documents in < 3 seconds, detecting cost risks, timeline red flags, and contractor reputation issues.',
   },
   {
     icon: Clock,
@@ -38,7 +38,7 @@ const FEATURE_CARDS = [
 
 const IMPACT_STATS = [
   { value: '70%', label: 'Faster Tender Issue', sub: 'NIT generation in minutes, not weeks' },
-  { value: '< 3s', label: 'Risk Analysis Time', sub: 'AI-powered scoring with Groq Llama 3.1' },
+  { value: '< 3s', label: 'Risk Analysis Time', sub: 'AI-powered scoring with Gemma 4' },
   { value: '₹2–5Cr', label: 'Cost Avoidance', sub: 'per city by flagging risky bids early' },
 ];
 

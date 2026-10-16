@@ -22,8 +22,8 @@ Departments such as PWD, the Water Board, BESCOM, the Municipal Corporation and 
 
 - **Live conflict map** — every project plotted on a Leaflet map, color-coded by department, with a clash summary panel and PDF export.
 - **Deterministic clash detection** — bounding-box and date-range overlap between projects. Fast, predictable and testable; it does not depend on an API key.
-- **AI risk scoring** — Groq (`llama-3.1-8b-instant`) estimates financial waste, a risk score, and a recommended action (merge / sequence / optimize).
-- **AI monitoring & coordination suite** — Gemini (`gemini-1.5-flash`) generates monitoring insights, coordination plans, trigger responses and map layout recommendations.
+- **AI risk scoring** — Gemma 4 (Google AI Studio) estimates financial waste, a risk score, and a recommended action (merge / sequence / optimize).
+- **AI monitoring & coordination suite** — Gemma 4 generates monitoring insights, coordination plans, trigger responses and map layout recommendations.
 - **Auto-generated NITs** — AI-drafted Notice Inviting Tenders for merged work, downloadable as PDF.
 - **Commissioner dashboard** — portfolio totals, active clashes, investment and waste-at-risk, plus a clash table with merge actions.
 - **AR field view** — camera overlay with high-risk-zone warnings for field engineers.
@@ -42,7 +42,7 @@ Every AI route falls back to a deterministic response when its API key is absent
 | Framework | Next.js 15 (App Router) + React 19 + TypeScript |
 | Styling | Tailwind CSS 4 + shadcn/ui (new-york) + `tw-animate-css` |
 | Maps | Leaflet + React-Leaflet + leaflet-draw / markercluster + OpenStreetMap |
-| AI | Groq SDK (`llama-3.1-8b-instant`), Google Gemini (`gemini-1.5-flash`) |
+| AI | Gemma 4 via Google AI Studio (`@google/generative-ai`) |
 | PDF | jsPDF |
 | Voice | Web Speech API (browser) |
 | Data (optional) | Supabase |
@@ -66,12 +66,13 @@ npm install
 
 ### 2. Configure environment
 
-Create `.env.local` in the project root. All values are optional — AI routes use their built-in fallbacks when keys are missing.
+Create `.env.local` (copy from `.env.example`). All values are optional — AI routes use their built-in fallbacks when keys are missing.
 
 ```env
-# AI providers
-GROQ_API_KEY=your_groq_api_key_here
-GEMINI_API_KEY=your_gemini_api_key_here
+# AI (Google AI Studio)
+GEMMA_API_KEY=your_gemma_api_key_here
+# Optional: override the Gemma model name (default: gemma-4)
+# GEMMA_MODEL=gemma-4
 
 # Translation (optional; static locales are used by default)
 TRANSLATION_PROVIDER=langbly        # langbly | libre
@@ -91,8 +92,8 @@ NEXT_PUBLIC_SUPABASE_URL=
 NEXT_PUBLIC_SUPABASE_ANON_KEY=
 ```
 
-- `GROQ_API_KEY` — [console.groq.com](https://console.groq.com)
-- `GEMINI_API_KEY` — [Google AI Studio](https://aistudio.google.com/)
+- `GEMMA_API_KEY` — [Google AI Studio](https://aistudio.google.com/)
+- `LANGBLY_API_KEY` — [Langbly](https://langbly.com/)
 
 ### 3. Run the dev server
 
@@ -168,8 +169,9 @@ cevora/
 │   └── LanguageSwitcher.tsx
 ├── lib/
 │   ├── clashEngine.ts             # Deterministic geometry clash detection
-│   ├── groq.ts                    # Groq client + risk scoring / NIT
-│   ├── gemini.ts                  # Gemini client + AI insight helpers
+│   ├── gemma.ts                   # Gemma 4 client — all AI functions
+│   ├── groq.ts                    # Legacy Groq client (retained, unused)
+│   ├── gemini.ts                  # Legacy Gemini client (retained, unused)
 │   ├── priorityEngine.ts
 │   ├── translation.ts             # Translation providers
 │   ├── mapIcons.ts
@@ -217,14 +219,14 @@ All routes are under `app/api/` and accept/return JSON.
 | Endpoint | Engine | Purpose |
 | --- | --- | --- |
 | `POST /api/clashes` | Deterministic | Detect overlapping projects (bounding-box + date-range) |
-| `POST /api/score-risk` | Groq | Estimate waste, risk score, recommended action |
-| `POST /api/generate-nit` | Groq | Draft a Notice Inviting Tender for merged work |
-| `POST /api/ai-monitoring` | Gemini | Monitoring insights |
-| `POST /api/ai-coordination` | Gemini | Coordination plan |
-| `POST /api/ai-triggering` | Gemini | Trigger response |
-| `POST /api/ai-decision` | Gemini | Recommended decision for a clash |
-| `POST /api/map-monitoring` | Gemini | Map monitoring insights |
-| `POST /api/map-layouting` | Gemini | Map layout recommendations |
+| `POST /api/score-risk` | Gemma 4 | Estimate waste, risk score, recommended action |
+| `POST /api/generate-nit` | Gemma 4 | Draft a Notice Inviting Tender for merged work |
+| `POST /api/ai-monitoring` | Gemma 4 | Monitoring insights |
+| `POST /api/ai-coordination` | Gemma 4 | Coordination plan |
+| `POST /api/ai-triggering` | Gemma 4 | Trigger response |
+| `POST /api/ai-decision` | Gemma 4 | Recommended decision for a clash |
+| `POST /api/map-monitoring` | Gemma 4 | Map monitoring insights |
+| `POST /api/map-layouting` | Gemma 4 | Map layout recommendations |
 | `POST /api/translate` | Langbly / LibreTranslate | Translation proxy |
 | `POST /api/notify` | ntfy.sh | Push notification |
 | `POST /api/email` | Resend | Email notification |
@@ -279,9 +281,7 @@ The camera-based AR view requires HTTPS, which Vercel provides automatically.
 
 **Map not showing** — ensure the dynamic import works; `components/MapView.tsx` loads `MapComponent` with `ssr: false`. Check the browser console for Leaflet errors.
 
-**Groq calls failing** — verify `GROQ_API_KEY`. Routes return a fallback response when the key is missing.
-
-**Gemini calls failing** — verify `GEMINI_API_KEY` and that the project has API access enabled in Google AI Studio. Fallbacks apply here too.
+**Gemma 4 calls failing** — verify `GEMMA_API_KEY` and that the project has API access enabled in Google AI Studio. If `gemma-4` is not available in your region, the client falls back to `gemini-1.5-flash`. Routes return a deterministic fallback when no key is present.
 
 **Translations failing** — static locales live in `data/locales/*.json`. The server proxy needs `LANGBLY_API_KEY` or a reachable `LIBRETRANSLATE_URL`.
 

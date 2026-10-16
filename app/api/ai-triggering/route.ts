@@ -1,4 +1,4 @@
-import { getAiTriggeringResponse } from '@/lib/gemini';
+import { getAiTriggeringResponse } from '@/lib/gemma';
 import { NextRequest, NextResponse } from 'next/server';
 
 export async function POST(request: NextRequest) {

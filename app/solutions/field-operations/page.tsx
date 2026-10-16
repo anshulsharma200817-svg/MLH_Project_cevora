@@ -46,7 +46,7 @@ const WHY_FEATURES = [
   { icon: <Camera className="h-4 w-4" />, text: 'AR overlay of asset metadata + risk scores' },
   { icon: <Smartphone className="h-4 w-4" />, text: 'Mobile-first design for field tablets & phones' },
   { icon: <MapPin className="h-4 w-4" />, text: 'GPS-accurate location verification' },
-  { icon: <Zap className="h-4 w-4" />, text: 'Hindi voice Q&A with Groq LLM integration' },
+  { icon: <Zap className="h-4 w-4" />, text: 'Hindi voice Q&A with Gemma 4 integration' },
   { icon: <ArrowRight className="h-4 w-4" />, text: 'Auto-sync to dashboard when connectivity returns' },
   { icon: <Camera className="h-4 w-4" />, text: 'Photo tagging + timestamp for legal proof' },
 ];
