@@ -1,4 +1,4 @@
-import { generateNIT } from '@/lib/groq';
+import { generateNIT } from '@/lib/gemma';
 import { NextRequest, NextResponse } from 'next/server';
 
 export async function POST(request: NextRequest) {

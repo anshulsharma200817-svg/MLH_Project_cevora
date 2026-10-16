@@ -1,4 +1,4 @@
-import { getAiMonitoringInsights } from '@/lib/gemini';
+import { getAiMonitoringInsights } from '@/lib/gemma';
 import { NextRequest, NextResponse } from 'next/server';
 
 export async function POST(request: NextRequest) {
