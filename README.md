@@ -13,8 +13,8 @@ Karana is a hackathon MVP platform designed for Gwalior, Madhya Pradesh, India. 
 ## ✨ Key Features
 
 - **🗺️ Live Conflict Map**: Real-time visualization of all infrastructure projects with clash detection
-- **🤖 AI Risk Scoring**: Groq-powered analysis of financial waste and clash severity
-- **🧠 AI Monitoring Suite**: Gemini-powered monitoring, coordination, triggering, and map intelligence
+- **🤖 AI Risk Scoring**: Gemma 4-powered analysis of financial waste and clash severity
+- **🧠 AI Monitoring Suite**: Gemma 4-powered monitoring, coordination, triggering, and map intelligence
 - **📄 Auto-Generated NITs**: AI-created Notice Inviting Tenders for merged projects
 - **📱 AR Field Warnings**: AR camera overlay with real-time geolocation alerts
 - **🎤 Voice Queries**: Hindi language support for field engineers
@@ -161,7 +161,8 @@ data/
 
 lib/
 ├── clashEngine.ts           # Clash detection logic
-└── groq.ts                  # Groq client
+├── gemma.ts                 # Gemma 4 AI client (all AI functions)
+└── groq.ts                  # Legacy Groq client (retained, unused)
 ```
 
 ## 🎮 Demo Features
@@ -189,7 +190,7 @@ Hero section with navigation to Dashboard and Map.
 ### 4. Tender Submission (/tender)
 1. Enter project details
 2. AI detects clashes (via `/api/clashes`)
-3. Groq scores risk (via `/api/score-risk`)
+3. Gemma 4 scores risk (via `/api/score-risk`)
 4. Generate merged NIT (via `/api/generate-nit`)
 5. Download NIT as PDF
 
@@ -208,28 +209,28 @@ Hero section with navigation to Dashboard and Map.
 Detects overlapping projects
 
 ### POST /api/score-risk
-Groq AI risk analysis
+Gemma 4 AI risk analysis — financial waste, risk score 1-10, recommendation
 
 ### POST /api/generate-nit
-Groq AI NIT document generator
+Gemma 4 AI NIT document generator — formal Indian government tender format
 
 ### POST /api/ai-monitoring
-Gemini AI monitoring insights
+Gemma 4 AI monitoring insights — anomaly detection and risk summary
 
 ### POST /api/ai-coordination
-Gemini AI coordination plan
+Gemma 4 AI coordination plan — dependency chains and scheduling recommendations
 
 ### POST /api/ai-triggering
-Gemini AI triggering response
+Gemma 4 AI triggering response — context-aware alert triggers and priorities
 
 ### POST /api/map-monitoring
-Gemini map monitoring insights
+Gemma 4 AI map monitoring — GIS layer integrity and asset drift detection
 
 ### POST /api/map-layouting
-Gemini map layout recommendations
+Gemma 4 AI map layouting — smart layout suggestions for zoning and heatmaps
 
 ### POST /api/ai-decision
-Gemini AI decisioning for clash actions
+Gemma 4 AI decisioning — clash action decisions with owner, priority, and reasoning
 
 ### POST /api/translate
 Translation proxy (optional, LibreTranslate)
@@ -309,6 +310,36 @@ Email updates via Resend
 - [ ] Test camera access (AR page requires HTTPS)
 - [ ] Monitor build time (< 2 min)
 - [ ] Verify Gemma AI responses on `/dashboard` → "Run AI Brief"
+
+## 🧠 How Gemma 4 Powers Karana
+
+Gemma 4 (via Google AI Studio) is the brain behind every AI capability in Karana. It replaces the previous Groq + Gemini stack with a single, unified model that handles all infrastructure coordination intelligence.
+
+### What Gemma 4 does in Karana
+
+| Function | API Route | What Gemma 4 Generates |
+|----------|-----------|------------------------|
+| **Risk Scoring** | `POST /api/score-risk` | Financial waste estimate (₹), clash risk score 1–10, and recommended action (`merge` / `sequence` / `optimize`) for overlapping projects |
+| **NIT Generation** | `POST /api/generate-nit` | Formal Notice Inviting Tender document in Indian government format — scope of work, combined cost, timeline, eligibility, and submission deadline |
+| **AI Monitoring** | `POST /api/ai-monitoring` | City-wide infrastructure monitoring summary, risk level, detected anomalies, and recommended actions |
+| **Coordination Plan** | `POST /api/ai-coordination` | Inter-department coordination playbook, dependency chains, and next steps to resolve clashes |
+| **Triggering Engine** | `POST /api/ai-triggering` | Context-aware alert triggers, priority levels, escalation reasons, and recommended actions for high-risk zones |
+| **Map Monitoring** | `POST /api/map-monitoring` | GIS anomaly detection, areas needing review, and confidence scores for map layer integrity |
+| **Map Layouting** | `POST /api/map-layouting` | Smart layout suggestions — label spacing, layer ordering, and conflict heatmap rationale |
+| **AI Decisioning** | `POST /api/ai-decision` | Final clash-action decision (`sequence` / `merge` / `optimize`), priority, assigned owner, reasoning, and next steps |
+
+### Why Gemma 4 fits this project
+
+- **Single model for all tasks**: One Gemma 4 instance handles risk analysis, document generation, monitoring, coordination, triggering, map intelligence, and decisioning — no need to manage multiple AI providers.
+- **Indian infrastructure context**: Gemma 4 understands government tender formats, ₹ currency formatting, and department coordination workflows relevant to Gwalior, Madhya Pradesh.
+- **Fallback safety**: If `gemma-4` is unavailable in your region, the client automatically falls back to `gemini-1.5-flash` so the platform never loses AI functionality.
+- **Hackathon-ready**: Works with mock data offline; AI functions gracefully degrade to fallback responses if the API key is missing.
+
+### Where to get your API key
+
+Get your **GEMMA_API_KEY** from [Google AI Studio](https://aistudio.google.com/) and add it to `.env.local` (local) or your deployment platform's environment variables (production).
+
+---
 
 ## 🎯 Future Enhancements
 
