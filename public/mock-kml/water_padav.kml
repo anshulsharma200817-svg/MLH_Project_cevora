@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Water Supply Upgrade – Padav Road</name>
+    <description>WATER BOARD | WATER_SUPPLY | 2026-03-18 to 2026-04-08 | ₹45,00,000 | MEDIUM</description>
+    <Style id="projectStyle">
+      <LineStyle>
+        <color>ff17A0D4</color>
+        <width>4</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>3317A0D4</color>
+      </PolyStyle>
+      <IconStyle>
+        <scale>1.2</scale>
+        <Icon>
+          <href>https://maps.google.com/mapfiles/ms/icons/ltblue-dot.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0.8</scale>
+      </LabelStyle>
+    </Style>
+    <Placemark>
+      <name>WATER_SUPPLY – Padav Road</name>
+      <description><![CDATA[
+        <b>Department:</b> WATER BOARD<br/>
+        <b>Work Type:</b> Water Supply<br/>
+        <b>Start Date:</b> 2026-03-18 | <b>End Date:</b> 2026-04-08<br/>
+        <b>Estimated Cost:</b> ₹45,00,000<br/>
+        <b>Risk Level:</b> MEDIUM<br/>
+        <b>Priority:</b> #2 — Water Supply Infrastructure<br/>
+        <b>Status:</b> PLANNED<br/>
+        <b>Clash With:</b> MPPKVVCL (Electrical)<br/>
+        <b>Notes:</b> Water supply upgrade on Padav Road, partial overlap near Padav junction. Clash overlap zone near 78.1780,26.2185
+      ]]></description>
+      <styleUrl>#projectStyle</styleUrl>
+      <LineString>
+        <tessellate>1</tessellate>
+        <coordinates>
+          78.1740,26.2175,0
+          78.1750,26.2178,0
+          78.1762,26.2181,0
+          78.1773,26.2183,0
+          78.1783,26.2186,0
+          78.1792,26.2189,0
+          78.1800,26.2191,0
+          78.1810,26.2193,0
+          78.1820,26.2195,0
+        </coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>Start – Water Supply Upgrade – Padav Road</name>
+      <description>Work start point / site access</description>
+      <styleUrl>#projectStyle</styleUrl>
+      <Point>
+        <coordinates>78.1740,26.2175,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>End – Water Supply Upgrade – Padav Road</name>
+      <description>Work completion point</description>
+      <styleUrl>#projectStyle</styleUrl>
+      <Point>
+        <coordinates>78.1820,26.2195,0</coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>

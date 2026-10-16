@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Morar Road Fibre Optic Cable</name>
+    <description>BSNL | TELECOM | 2026-03-20 to 2026-04-05 | ₹18,00,000 | MEDIUM</description>
+    <Style id="projectStyle">
+      <LineStyle>
+        <color>ff00FF00</color>
+        <width>3</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>3300FF00</color>
+      </PolyStyle>
+      <IconStyle>
+        <scale>1.2</scale>
+        <Icon>
+          <href>https://maps.google.com/mapfiles/ms/icons/green-dot.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0.8</scale>
+      </LabelStyle>
+    </Style>
+    <Placemark>
+      <name>TELECOM – Morar Road</name>
+      <description><![CDATA[
+        <b>Department:</b> BSNL<br/>
+        <b>Work Type:</b> Telecom Fibre Optic<br/>
+        <b>Start Date:</b> 2026-03-20 | <b>End Date:</b> 2026-04-05<br/>
+        <b>Estimated Cost:</b> ₹18,00,000<br/>
+        <b>Risk Level:</b> MEDIUM<br/>
+        <b>Priority:</b> #4 — Telecom<br/>
+        <b>Status:</b> PLANNED<br/>
+        <b>Clash With:</b> GMC (Sewer)<br/>
+        <b>Notes:</b> Fibre optic cable laying on Morar Road, overlapping with sewer project. Clash overlap zone: 78.1910,26.2375 to 78.1960,26.2405
+      ]]></description>
+      <styleUrl>#projectStyle</styleUrl>
+      <LineString>
+        <tessellate>1</tessellate>
+        <coordinates>
+          78.1900,26.2370,0
+          78.1913,26.2378,0
+          78.1926,26.2386,0
+          78.1939,26.2394,0
+          78.1952,26.2402,0
+          78.1963,26.2410,0
+          78.1974,26.2418,0
+          78.1983,26.2425,0
+          78.1990,26.2430,0
+        </coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>Start – Morar Road Fibre Optic Cable</name>
+      <description>Work start point / site access</description>
+      <styleUrl>#projectStyle</styleUrl>
+      <Point>
+        <coordinates>78.1900,26.2370,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>End – Morar Road Fibre Optic Cable</name>
+      <description>Work completion point</description>
+      <styleUrl>#projectStyle</styleUrl>
+      <Point>
+        <coordinates>78.1990,26.2430,0</coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>

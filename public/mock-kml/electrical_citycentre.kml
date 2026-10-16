@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>HV Cable Installation – City Centre Road</name>
+    <description>MPPKVVCL | ELECTRICAL | 2026-03-10 to 2026-03-30 | ₹30,00,000 | HIGH</description>
+    <Style id="projectStyle">
+      <LineStyle>
+        <color>ff00FFFF</color>
+        <width>4</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>3300FFFF</color>
+      </PolyStyle>
+      <IconStyle>
+        <scale>1.2</scale>
+        <Icon>
+          <href>https://maps.google.com/mapfiles/ms/icons/yellow-dot.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0.8</scale>
+      </LabelStyle>
+    </Style>
+    <Placemark>
+      <name>ELECTRICAL – City Centre Road</name>
+      <description><![CDATA[
+        <b>Department:</b> MPPKVVCL<br/>
+        <b>Work Type:</b> Electrical<br/>
+        <b>Start Date:</b> 2026-03-10 | <b>End Date:</b> 2026-03-30<br/>
+        <b>Estimated Cost:</b> ₹30,00,000<br/>
+        <b>Risk Level:</b> HIGH<br/>
+        <b>Priority:</b> #3 — Electrical Infrastructure<br/>
+        <b>Status:</b> PLANNED<br/>
+        <b>Clash With:</b> PWD (Road Paving)<br/>
+        <b>Notes:</b> HV cable installation on City Centre Road. Clash overlap zone: 78.1810,26.2185 to 78.1860,26.2175
+      ]]></description>
+      <styleUrl>#projectStyle</styleUrl>
+      <LineString>
+        <tessellate>1</tessellate>
+        <coordinates>
+          78.1795,26.2195,0
+          78.1806,26.2192,0
+          78.1818,26.2189,0
+          78.1830,26.2186,0
+          78.1842,26.2183,0
+          78.1852,26.2180,0
+          78.1860,26.2177,0
+          78.1870,26.2173,0
+          78.1880,26.2168,0
+        </coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>Start – HV Cable Installation – City Centre Road</name>
+      <description>Work start point / site access</description>
+      <styleUrl>#projectStyle</styleUrl>
+      <Point>
+        <coordinates>78.1795,26.2195,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>End – HV Cable Installation – City Centre Road</name>
+      <description>Work completion point</description>
+      <styleUrl>#projectStyle</styleUrl>
+      <Point>
+        <coordinates>78.1880,26.2168,0</coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>

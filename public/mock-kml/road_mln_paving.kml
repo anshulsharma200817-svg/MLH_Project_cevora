@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>MLN Road Full Resurfacing</name>
+    <description>PWD | ROAD_PAVING | 2026-03-12 to 2026-04-10 | ₹65,00,000 | HIGH</description>
+    <Style id="projectStyle">
+      <LineStyle>
+        <color>ff4444FF</color>
+        <width>5</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>334444FF</color>
+      </PolyStyle>
+      <IconStyle>
+        <scale>1.2</scale>
+        <Icon>
+          <href>https://maps.google.com/mapfiles/ms/icons/red-dot.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0.8</scale>
+      </LabelStyle>
+    </Style>
+    <Placemark>
+      <name>ROAD_PAVING – MLN Road</name>
+      <description><![CDATA[
+        <b>Department:</b> PWD<br/>
+        <b>Work Type:</b> Road Paving<br/>
+        <b>Start Date:</b> 2026-03-12 | <b>End Date:</b> 2026-04-10<br/>
+        <b>Estimated Cost:</b> ₹65,00,000<br/>
+        <b>Risk Level:</b> HIGH<br/>
+        <b>Priority:</b> #7 — Road Paving<br/>
+        <b>Status:</b> PLANNED<br/>
+        <b>Clash With:</b> GMC (Sewer)<br/>
+        <b>Notes:</b> MLN Road full resurfacing, clashes with sewer project. Clash overlap zone: 78.1670,26.2115 to 78.1730,26.2111
+      ]]></description>
+      <styleUrl>#projectStyle</styleUrl>
+      <LineString>
+        <tessellate>1</tessellate>
+        <coordinates>
+          78.1650,26.2118,0
+          78.1667,26.2117,0
+          78.1684,26.2116,0
+          78.1701,26.2115,0
+          78.1718,26.2114,0
+          78.1735,26.2113,0
+          78.1752,26.2112,0
+          78.1769,26.2111,0
+          78.1780,26.2110,0
+        </coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>Start – MLN Road Full Resurfacing</name>
+      <description>Work start point / site access</description>
+      <styleUrl>#projectStyle</styleUrl>
+      <Point>
+        <coordinates>78.1650,26.2118,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>End – MLN Road Full Resurfacing</name>
+      <description>Work completion point</description>
+      <styleUrl>#projectStyle</styleUrl>
+      <Point>
+        <coordinates>78.1780,26.2110,0</coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>

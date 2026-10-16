@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Padav Junction Emergency Pothole Repair</name>
+    <description>PWD | POTHOLE_REPAIR | 2026-03-01 to 2026-03-08 | ₹8,00,000 | HIGH</description>
+    <Style id="projectStyle">
+      <LineStyle>
+        <color>ff0000FF</color>
+        <width>6</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>330000FF</color>
+      </PolyStyle>
+      <IconStyle>
+        <scale>1.2</scale>
+        <Icon>
+          <href>https://maps.google.com/mapfiles/ms/icons/red-dot.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0.8</scale>
+      </LabelStyle>
+    </Style>
+    <Placemark>
+      <name>POTHOLE_REPAIR – Padav Road</name>
+      <description><![CDATA[
+        <b>Department:</b> PWD<br/>
+        <b>Work Type:</b> Pothole Repair<br/>
+        <b>Start Date:</b> 2026-03-01 | <b>End Date:</b> 2026-03-08<br/>
+        <b>Estimated Cost:</b> ₹8,00,000<br/>
+        <b>Risk Level:</b> HIGH<br/>
+        <b>Priority:</b> #0 — Emergency<br/>
+        <b>Status:</b> EMERGENCY<br/>
+        <b>Clash With:</b> None<br/>
+        <b>Notes:</b> Emergency pothole repair on Padav junction – accident reports
+      ]]></description>
+      <styleUrl>#projectStyle</styleUrl>
+      <LineString>
+        <tessellate>1</tessellate>
+        <coordinates>
+          78.1760,26.2180,0
+          78.1766,26.2181,0
+          78.1772,26.2183,0
+          78.1778,26.2185,0
+          78.1784,26.2186,0
+          78.1790,26.2188,0
+          78.1795,26.2189,0
+          78.1800,26.2190,0
+        </coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>Start – Padav Junction Emergency Pothole Repair</name>
+      <description>Work start point / site access</description>
+      <styleUrl>#projectStyle</styleUrl>
+      <Point>
+        <coordinates>78.1760,26.2180,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>End – Padav Junction Emergency Pothole Repair</name>
+      <description>Work completion point</description>
+      <styleUrl>#projectStyle</styleUrl>
+      <Point>
+        <coordinates>78.1800,26.2190,0</coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>

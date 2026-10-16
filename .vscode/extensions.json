@@ -1,0 +1,45 @@
+{
+  "recommendations": [
+    // Core Development Extensions
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "bradlc.vscode-tailwindcss",
+    "github.copilot",
+    "github.copilot-chat",
+
+    // TypeScript & JavaScript
+    "usernamehw.errorlens",
+    "yoavbls.pretty-ts-errors",
+    "meganrogge.template-string-converter",
+
+    // React & Next.js
+    "dsznajder.es7-react-js-snippets",
+    "burkeholland.simple-react-snippets",
+
+    // Git & Version Control
+    "eamodio.gitlens",
+    "mhutchie.git-graph",
+
+    // Utilities
+    "christian-kohler.path-intellisense",
+    "streetsidesoftware.code-spell-checker",
+    "wayou.vscode-todo-highlight",
+    "gruntfuggly.todo-tree",
+    "mikestead.dotenv",
+
+    // UI & Design
+    "csstools.postcss",
+    "figma.figma-vscode-extension",
+
+    // Code Quality
+    "sonarsource.sonarlint-vscode",
+    "editorconfig.editorconfig",
+
+    // Testing
+    "orta.vscode-jest",
+
+    // Documentation
+    "yzhang.markdown-all-in-one",
+    "bierner.markdown-mermaid"
+  ]
+}
