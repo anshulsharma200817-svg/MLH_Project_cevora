@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Maharajbada GPON Fibre Extension</name>
+    <description>BSNL | TELECOM | 2026-03-25 to 2026-04-10 | ₹15,00,000 | LOW</description>
+    <Style id="projectStyle">
+      <LineStyle>
+        <color>ff00FF00</color>
+        <width>3</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>3300FF00</color>
+      </PolyStyle>
+      <IconStyle>
+        <scale>1.2</scale>
+        <Icon>
+          <href>https://maps.google.com/mapfiles/ms/icons/green-dot.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0.8</scale>
+      </LabelStyle>
+    </Style>
+    <Placemark>
+      <name>TELECOM – Maharajbada Road</name>
+      <description><![CDATA[
+        <b>Department:</b> BSNL<br/>
+        <b>Work Type:</b> Telecom Fibre Optic<br/>
+        <b>Start Date:</b> 2026-03-25 | <b>End Date:</b> 2026-04-10<br/>
+        <b>Estimated Cost:</b> ₹15,00,000<br/>
+        <b>Risk Level:</b> LOW<br/>
+        <b>Priority:</b> #4 — Telecom<br/>
+        <b>Status:</b> PLANNED<br/>
+        <b>Clash With:</b> None<br/>
+        <b>Notes:</b> GPON fibre extension to Maharajbada area
+      ]]></description>
+      <styleUrl>#projectStyle</styleUrl>
+      <LineString>
+        <tessellate>1</tessellate>
+        <coordinates>
+          78.1750,26.2210,0
+          78.1758,26.2214,0
+          78.1766,26.2218,0
+          78.1774,26.2222,0
+          78.1782,26.2226,0
+          78.1790,26.2230,0
+          78.1798,26.2234,0
+          78.1805,26.2238,0
+          78.1810,26.2240,0
+        </coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>Start – Maharajbada GPON Fibre Extension</name>
+      <description>Work start point / site access</description>
+      <styleUrl>#projectStyle</styleUrl>
+      <Point>
+        <coordinates>78.1750,26.2210,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>End – Maharajbada GPON Fibre Extension</name>
+      <description>Work completion point</description>
+      <styleUrl>#projectStyle</styleUrl>
+      <Point>
+        <coordinates>78.1810,26.2240,0</coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>

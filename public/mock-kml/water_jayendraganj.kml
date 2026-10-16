@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Water Pipeline Extension – Jayendraganj Road</name>
+    <description>WATER BOARD | WATER_SUPPLY | 2026-03-12 to 2026-04-02 | ₹52,00,000 | MEDIUM</description>
+    <Style id="projectStyle">
+      <LineStyle>
+        <color>ff17A0D4</color>
+        <width>4</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>3317A0D4</color>
+      </PolyStyle>
+      <IconStyle>
+        <scale>1.2</scale>
+        <Icon>
+          <href>https://maps.google.com/mapfiles/ms/icons/ltblue-dot.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0.8</scale>
+      </LabelStyle>
+    </Style>
+    <Placemark>
+      <name>WATER_SUPPLY – Jayendraganj Road</name>
+      <description><![CDATA[
+        <b>Department:</b> WATER BOARD<br/>
+        <b>Work Type:</b> Water Supply<br/>
+        <b>Start Date:</b> 2026-03-12 | <b>End Date:</b> 2026-04-02<br/>
+        <b>Estimated Cost:</b> ₹52,00,000<br/>
+        <b>Risk Level:</b> MEDIUM<br/>
+        <b>Priority:</b> #2 — Water Supply Infrastructure<br/>
+        <b>Status:</b> PLANNED<br/>
+        <b>Clash With:</b> None<br/>
+        <b>Notes:</b> Water pipeline extension on Jayendraganj Road
+      ]]></description>
+      <styleUrl>#projectStyle</styleUrl>
+      <LineString>
+        <tessellate>1</tessellate>
+        <coordinates>
+          78.1720,26.2250,0
+          78.1730,26.2255,0
+          78.1740,26.2260,0
+          78.1752,26.2266,0
+          78.1763,26.2272,0
+          78.1774,26.2278,0
+          78.1783,26.2282,0
+          78.1792,26.2287,0
+          78.1800,26.2290,0
+        </coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>Start – Water Pipeline Extension – Jayendraganj Road</name>
+      <description>Work start point / site access</description>
+      <styleUrl>#projectStyle</styleUrl>
+      <Point>
+        <coordinates>78.1720,26.2250,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>End – Water Pipeline Extension – Jayendraganj Road</name>
+      <description>Work completion point</description>
+      <styleUrl>#projectStyle</styleUrl>
+      <Point>
+        <coordinates>78.1800,26.2290,0</coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>

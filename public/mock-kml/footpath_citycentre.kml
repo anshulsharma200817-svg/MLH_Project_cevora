@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>City Centre Road Footpath Construction</name>
+    <description>GMC | FOOTPATH | 2026-04-15 to 2026-05-05 | ₹20,00,000 | LOW</description>
+    <Style id="projectStyle">
+      <LineStyle>
+        <color>ffFF00FF</color>
+        <width>3</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>33FF00FF</color>
+      </PolyStyle>
+      <IconStyle>
+        <scale>1.2</scale>
+        <Icon>
+          <href>https://maps.google.com/mapfiles/ms/icons/purple-dot.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0.8</scale>
+      </LabelStyle>
+    </Style>
+    <Placemark>
+      <name>FOOTPATH – City Centre Road</name>
+      <description><![CDATA[
+        <b>Department:</b> GMC<br/>
+        <b>Work Type:</b> Footpath Construction<br/>
+        <b>Start Date:</b> 2026-04-15 | <b>End Date:</b> 2026-05-05<br/>
+        <b>Estimated Cost:</b> ₹20,00,000<br/>
+        <b>Risk Level:</b> LOW<br/>
+        <b>Priority:</b> #6 — Footpath<br/>
+        <b>Status:</b> PLANNED<br/>
+        <b>Clash With:</b> None<br/>
+        <b>Notes:</b> Footpath construction along City Centre Road
+      ]]></description>
+      <styleUrl>#projectStyle</styleUrl>
+      <LineString>
+        <tessellate>1</tessellate>
+        <coordinates>
+          78.1795,26.2195,0
+          78.1807,26.2192,0
+          78.1819,26.2189,0
+          78.1831,26.2186,0
+          78.1843,26.2183,0
+          78.1855,26.2179,0
+          78.1865,26.2175,0
+          78.1874,26.2171,0
+          78.1880,26.2168,0
+        </coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>Start – City Centre Road Footpath Construction</name>
+      <description>Work start point / site access</description>
+      <styleUrl>#projectStyle</styleUrl>
+      <Point>
+        <coordinates>78.1795,26.2195,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>End – City Centre Road Footpath Construction</name>
+      <description>Work completion point</description>
+      <styleUrl>#projectStyle</styleUrl>
+      <Point>
+        <coordinates>78.1880,26.2168,0</coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>

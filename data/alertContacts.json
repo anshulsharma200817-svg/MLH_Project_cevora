@@ -1,0 +1,27 @@
+{
+  "PWD": {
+    "contact": "Field Supervisor",
+    "channel": "On-file contact",
+    "note": "Demo contact only"
+  },
+  "WATER": {
+    "contact": "Zone Engineer",
+    "channel": "On-file contact",
+    "note": "Demo contact only"
+  },
+  "BESCOM": {
+    "contact": "Operations Lead",
+    "channel": "On-file contact",
+    "note": "Demo contact only"
+  },
+  "MUNICIPAL": {
+    "contact": "Ward Manager",
+    "channel": "On-file contact",
+    "note": "Demo contact only"
+  },
+  "TELECOM": {
+    "contact": "Network Supervisor",
+    "channel": "On-file contact",
+    "note": "Demo contact only"
+  }
+}

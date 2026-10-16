@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Storm Drainage Upgrade – Phool Bagh Road</name>
+    <description>GWALIOR MUNICIPAL CORP | SEWER | 2026-03-10 to 2026-03-28 | ₹28,00,000 | HIGH</description>
+    <Style id="projectStyle">
+      <LineStyle>
+        <color>ff0000FF</color>
+        <width>4</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>330000FF</color>
+      </PolyStyle>
+      <IconStyle>
+        <scale>1.2</scale>
+        <Icon>
+          <href>https://maps.google.com/mapfiles/ms/icons/blue-dot.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0.8</scale>
+      </LabelStyle>
+    </Style>
+    <Placemark>
+      <name>SEWER – Phool Bagh Road</name>
+      <description><![CDATA[
+        <b>Department:</b> GWALIOR MUNICIPAL CORP<br/>
+        <b>Work Type:</b> Sewer Line<br/>
+        <b>Start Date:</b> 2026-03-10 | <b>End Date:</b> 2026-03-28<br/>
+        <b>Estimated Cost:</b> ₹28,00,000<br/>
+        <b>Risk Level:</b> HIGH<br/>
+        <b>Priority:</b> #1 — Underground Infrastructure<br/>
+        <b>Status:</b> PLANNED<br/>
+        <b>Clash With:</b> PWD (Road Paving)<br/>
+        <b>Notes:</b> Storm drainage upgrade on Phool Bagh Road. Clash overlap zone: 78.1689,26.2130 to 78.1691,26.2095
+      ]]></description>
+      <styleUrl>#projectStyle</styleUrl>
+      <LineString>
+        <tessellate>1</tessellate>
+        <coordinates>
+          78.1689,26.2145,0
+          78.1689,26.2137,0
+          78.1689,26.2130,0
+          78.1690,26.2122,0
+          78.1690,26.2114,0
+          78.1690,26.2106,0
+          78.1691,26.2098,0
+          78.1691,26.2090,0
+          78.1692,26.2080,0
+          78.1692,26.2070,0
+        </coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>Start – Storm Drainage Upgrade – Phool Bagh Road</name>
+      <description>Work start point / site access</description>
+      <styleUrl>#projectStyle</styleUrl>
+      <Point>
+        <coordinates>78.1689,26.2145,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>End – Storm Drainage Upgrade – Phool Bagh Road</name>
+      <description>Work completion point</description>
+      <styleUrl>#projectStyle</styleUrl>
+      <Point>
+        <coordinates>78.1692,26.2070,0</coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>

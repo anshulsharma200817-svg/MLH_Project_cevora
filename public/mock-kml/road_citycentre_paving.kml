@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>City Centre Road Resurfacing</name>
+    <description>PWD | ROAD_PAVING | 2026-03-18 to 2026-04-12 | ₹58,00,000 | HIGH</description>
+    <Style id="projectStyle">
+      <LineStyle>
+        <color>ff4444FF</color>
+        <width>5</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>334444FF</color>
+      </PolyStyle>
+      <IconStyle>
+        <scale>1.2</scale>
+        <Icon>
+          <href>https://maps.google.com/mapfiles/ms/icons/red-dot.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0.8</scale>
+      </LabelStyle>
+    </Style>
+    <Placemark>
+      <name>ROAD_PAVING – City Centre Road</name>
+      <description><![CDATA[
+        <b>Department:</b> PWD<br/>
+        <b>Work Type:</b> Road Paving<br/>
+        <b>Start Date:</b> 2026-03-18 | <b>End Date:</b> 2026-04-12<br/>
+        <b>Estimated Cost:</b> ₹58,00,000<br/>
+        <b>Risk Level:</b> HIGH<br/>
+        <b>Priority:</b> #7 — Road Paving<br/>
+        <b>Status:</b> PLANNED<br/>
+        <b>Clash With:</b> MPPKVVCL (Electrical)<br/>
+        <b>Notes:</b> City Centre Road resurfacing, clashes with HV cable project. Clash overlap zone: 78.1810,26.2185 to 78.1860,26.2175
+      ]]></description>
+      <styleUrl>#projectStyle</styleUrl>
+      <LineString>
+        <tessellate>1</tessellate>
+        <coordinates>
+          78.1795,26.2195,0
+          78.1808,26.2192,0
+          78.1821,26.2189,0
+          78.1834,26.2186,0
+          78.1847,26.2182,0
+          78.1856,26.2179,0
+          78.1865,26.2175,0
+          78.1874,26.2171,0
+          78.1880,26.2168,0
+        </coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>Start – City Centre Road Resurfacing</name>
+      <description>Work start point / site access</description>
+      <styleUrl>#projectStyle</styleUrl>
+      <Point>
+        <coordinates>78.1795,26.2195,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>End – City Centre Road Resurfacing</name>
+      <description>Work completion point</description>
+      <styleUrl>#projectStyle</styleUrl>
+      <Point>
+        <coordinates>78.1880,26.2168,0</coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>

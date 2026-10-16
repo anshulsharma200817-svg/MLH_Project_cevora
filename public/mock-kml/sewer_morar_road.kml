@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Sewer Branch Extension – Morar Road</name>
+    <description>GWALIOR MUNICIPAL CORP | SEWER | 2026-03-15 to 2026-04-05 | ₹42,00,000 | MEDIUM</description>
+    <Style id="projectStyle">
+      <LineStyle>
+        <color>ff0000FF</color>
+        <width>4</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>330000FF</color>
+      </PolyStyle>
+      <IconStyle>
+        <scale>1.2</scale>
+        <Icon>
+          <href>https://maps.google.com/mapfiles/ms/icons/blue-dot.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0.8</scale>
+      </LabelStyle>
+    </Style>
+    <Placemark>
+      <name>SEWER – Morar Road</name>
+      <description><![CDATA[
+        <b>Department:</b> GWALIOR MUNICIPAL CORP<br/>
+        <b>Work Type:</b> Sewer Line<br/>
+        <b>Start Date:</b> 2026-03-15 | <b>End Date:</b> 2026-04-05<br/>
+        <b>Estimated Cost:</b> ₹42,00,000<br/>
+        <b>Risk Level:</b> MEDIUM<br/>
+        <b>Priority:</b> #1 — Underground Infrastructure<br/>
+        <b>Status:</b> PLANNED<br/>
+        <b>Clash With:</b> BSNL (Telecom Fibre)<br/>
+        <b>Notes:</b> Sewer branch extension along Morar Road. Clash overlap zone: 78.1910,26.2375 to 78.1960,26.2405
+      ]]></description>
+      <styleUrl>#projectStyle</styleUrl>
+      <LineString>
+        <tessellate>1</tessellate>
+        <coordinates>
+          78.1900,26.2370,0
+          78.1912,26.2378,0
+          78.1924,26.2385,0
+          78.1936,26.2392,0
+          78.1948,26.2399,0
+          78.1958,26.2406,0
+          78.1968,26.2413,0
+          78.1978,26.2420,0
+          78.1985,26.2426,0
+          78.1990,26.2430,0
+        </coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>Start – Sewer Branch Extension – Morar Road</name>
+      <description>Work start point / site access</description>
+      <styleUrl>#projectStyle</styleUrl>
+      <Point>
+        <coordinates>78.1900,26.2370,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>End – Sewer Branch Extension – Morar Road</name>
+      <description>Work completion point</description>
+      <styleUrl>#projectStyle</styleUrl>
+      <Point>
+        <coordinates>78.1990,26.2430,0</coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>

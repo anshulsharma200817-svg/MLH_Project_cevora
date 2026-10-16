@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Fort Road LED Streetlight Installation</name>
+    <description>GMC | STREET_LIGHT | 2026-04-12 to 2026-04-28 | ₹16,00,000 | LOW</description>
+    <Style id="projectStyle">
+      <LineStyle>
+        <color>ff00FFFF</color>
+        <width>3</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>3300FFFF</color>
+      </PolyStyle>
+      <IconStyle>
+        <scale>1.2</scale>
+        <Icon>
+          <href>https://maps.google.com/mapfiles/ms/icons/orange-dot.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0.8</scale>
+      </LabelStyle>
+    </Style>
+    <Placemark>
+      <name>STREET_LIGHT – Gwalior Fort Road</name>
+      <description><![CDATA[
+        <b>Department:</b> GMC<br/>
+        <b>Work Type:</b> Street Light Installation<br/>
+        <b>Start Date:</b> 2026-04-12 | <b>End Date:</b> 2026-04-28<br/>
+        <b>Estimated Cost:</b> ₹16,00,000<br/>
+        <b>Risk Level:</b> LOW<br/>
+        <b>Priority:</b> #5 — Street Light<br/>
+        <b>Status:</b> PLANNED<br/>
+        <b>Clash With:</b> None<br/>
+        <b>Notes:</b> LED streetlight installation along Fort Road
+      ]]></description>
+      <styleUrl>#projectStyle</styleUrl>
+      <LineString>
+        <tessellate>1</tessellate>
+        <coordinates>
+          78.1670,26.2280,0
+          78.1677,26.2288,0
+          78.1684,26.2296,0
+          78.1691,26.2304,0
+          78.1698,26.2312,0
+          78.1705,26.2320,0
+          78.1712,26.2328,0
+          78.1720,26.2340,0
+        </coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>Start – Fort Road LED Streetlight Installation</name>
+      <description>Work start point / site access</description>
+      <styleUrl>#projectStyle</styleUrl>
+      <Point>
+        <coordinates>78.1670,26.2280,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>End – Fort Road LED Streetlight Installation</name>
+      <description>Work completion point</description>
+      <styleUrl>#projectStyle</styleUrl>
+      <Point>
+        <coordinates>78.1720,26.2340,0</coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>

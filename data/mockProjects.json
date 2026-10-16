@@ -1,0 +1,137 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "dept": "PWD",
+        "work_type": "ROAD_PAVING",
+        "title": "MLN Road Resurfacing",
+        "start": "2026-03-01",
+        "end": "2026-03-15",
+        "cost": 5000000,
+        "risk": "HIGH",
+        "clash_with": "WATER",
+        "description": "Full resurfacing of MLN Road from Phool Bagh to City Centre"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [78.167, 26.221],
+          [78.175, 26.225]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 2,
+        "dept": "WATER",
+        "work_type": "SEWER",
+        "title": "Sewer Line – MLN Road",
+        "start": "2026-03-05",
+        "end": "2026-03-20",
+        "cost": 3500000,
+        "risk": "HIGH",
+        "clash_with": "PWD",
+        "description": "Underground sewer pipe replacement along MLN Road"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [78.168, 26.221],
+          [78.176, 26.225]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 3,
+        "dept": "BESCOM",
+        "work_type": "ELECTRICAL",
+        "title": "HV Cable – City Centre",
+        "start": "2026-03-10",
+        "end": "2026-03-18",
+        "cost": 2800000,
+        "risk": "MEDIUM",
+        "clash_with": "WATER",
+        "description": "High voltage underground cable laying near City Centre"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [78.172, 26.222],
+          [78.178, 26.228]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 4,
+        "dept": "PWD",
+        "work_type": "POTHOLE_REPAIR",
+        "title": "Phool Bagh Rd Patch",
+        "start": "2026-03-12",
+        "end": "2026-03-22",
+        "cost": 1200000,
+        "risk": "LOW",
+        "clash_with": null,
+        "description": "Pothole patching on Phool Bagh Road"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [78.180, 26.230],
+          [78.187, 26.235]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 5,
+        "dept": "MUNICIPAL",
+        "work_type": "FOOTPATH",
+        "title": "Drainage – Lashkar Zone",
+        "start": "2026-03-08",
+        "end": "2026-03-25",
+        "cost": 4200000,
+        "risk": "MEDIUM",
+        "clash_with": "BESCOM",
+        "description": "Storm drainage upgrade in Lashkar residential zone"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [78.160, 26.215],
+          [78.167, 26.220]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 6,
+        "dept": "TELECOM",
+        "work_type": "TELECOM",
+        "title": "Fibre Optic – Morar Road",
+        "start": "2026-03-03",
+        "end": "2026-03-14",
+        "cost": 900000,
+        "risk": "LOW",
+        "clash_with": null,
+        "description": "BSNL fibre optic cable installation on Morar Road"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [78.190, 26.237],
+          [78.198, 26.242]
+        ]
+      }
+    }
+  ]
+}

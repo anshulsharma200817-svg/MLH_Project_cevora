@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Phool Bagh Road Resurfacing</name>
+    <description>PWD | ROAD_PAVING | 2026-03-15 to 2026-04-05 | ₹55,00,000 | HIGH</description>
+    <Style id="projectStyle">
+      <LineStyle>
+        <color>ff4444FF</color>
+        <width>5</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>334444FF</color>
+      </PolyStyle>
+      <IconStyle>
+        <scale>1.2</scale>
+        <Icon>
+          <href>https://maps.google.com/mapfiles/ms/icons/red-dot.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0.8</scale>
+      </LabelStyle>
+    </Style>
+    <Placemark>
+      <name>ROAD_PAVING – Phool Bagh Road</name>
+      <description><![CDATA[
+        <b>Department:</b> PWD<br/>
+        <b>Work Type:</b> Road Paving<br/>
+        <b>Start Date:</b> 2026-03-15 | <b>End Date:</b> 2026-04-05<br/>
+        <b>Estimated Cost:</b> ₹55,00,000<br/>
+        <b>Risk Level:</b> HIGH<br/>
+        <b>Priority:</b> #7 — Road Paving<br/>
+        <b>Status:</b> PLANNED<br/>
+        <b>Clash With:</b> GMC (Sewer)<br/>
+        <b>Notes:</b> Phool Bagh road resurfacing overlapping with drainage project. Clash overlap zone: 78.1689,26.2130 to 78.1691,26.2095
+      ]]></description>
+      <styleUrl>#projectStyle</styleUrl>
+      <LineString>
+        <tessellate>1</tessellate>
+        <coordinates>
+          78.1689,26.2145,0
+          78.1689,26.2136,0
+          78.1689,26.2127,0
+          78.1690,26.2118,0
+          78.1690,26.2109,0
+          78.1690,26.2100,0
+          78.1691,26.2091,0
+          78.1691,26.2082,0
+          78.1692,26.2070,0
+        </coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>Start – Phool Bagh Road Resurfacing</name>
+      <description>Work start point / site access</description>
+      <styleUrl>#projectStyle</styleUrl>
+      <Point>
+        <coordinates>78.1689,26.2145,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>End – Phool Bagh Road Resurfacing</name>
+      <description>Work completion point</description>
+      <styleUrl>#projectStyle</styleUrl>
+      <Point>
+        <coordinates>78.1692,26.2070,0</coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>

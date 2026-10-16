@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Water Supply Main Upgrade – MLN Road</name>
+    <description>WATER BOARD | WATER_SUPPLY | 2026-03-08 to 2026-03-30 | ₹48,00,000 | HIGH</description>
+    <Style id="projectStyle">
+      <LineStyle>
+        <color>ff17A0D4</color>
+        <width>4</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>3317A0D4</color>
+      </PolyStyle>
+      <IconStyle>
+        <scale>1.2</scale>
+        <Icon>
+          <href>https://maps.google.com/mapfiles/ms/icons/ltblue-dot.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0.8</scale>
+      </LabelStyle>
+    </Style>
+    <Placemark>
+      <name>WATER_SUPPLY – MLN Road</name>
+      <description><![CDATA[
+        <b>Department:</b> WATER BOARD<br/>
+        <b>Work Type:</b> Water Supply<br/>
+        <b>Start Date:</b> 2026-03-08 | <b>End Date:</b> 2026-03-30<br/>
+        <b>Estimated Cost:</b> ₹48,00,000<br/>
+        <b>Risk Level:</b> HIGH<br/>
+        <b>Priority:</b> #2 — Water Supply Infrastructure<br/>
+        <b>Status:</b> PLANNED<br/>
+        <b>Clash With:</b> None<br/>
+        <b>Notes:</b> Water supply main upgrade along MLN Road
+      ]]></description>
+      <styleUrl>#projectStyle</styleUrl>
+      <LineString>
+        <tessellate>1</tessellate>
+        <coordinates>
+          78.1650,26.2118,0
+          78.1665,26.2117,0
+          78.1680,26.2116,0
+          78.1695,26.2115,0
+          78.1710,26.2114,0
+          78.1725,26.2113,0
+          78.1740,26.2112,0
+          78.1755,26.2111,0
+          78.1770,26.2110,0
+          78.1780,26.2110,0
+        </coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>Start – Water Supply Main Upgrade – MLN Road</name>
+      <description>Work start point / site access</description>
+      <styleUrl>#projectStyle</styleUrl>
+      <Point>
+        <coordinates>78.1650,26.2118,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>End – Water Supply Main Upgrade – MLN Road</name>
+      <description>Work completion point</description>
+      <styleUrl>#projectStyle</styleUrl>
+      <Point>
+        <coordinates>78.1780,26.2110,0</coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>
