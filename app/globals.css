@@ -10,16 +10,16 @@
   display: none !important;
 }
 
-/* Custom tooltip for Karana map features */
-.karana-tooltip {
+/* Custom tooltip for Cevora map features — flat, no shadow */
+.cevora-tooltip {
   font-family: inherit;
   font-size: 12px;
   padding: 6px 10px;
   border-radius: 8px;
-  border: 1px solid hsl(var(--border));
-  background: hsl(var(--background));
-  color: hsl(var(--foreground));
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  border: 1px solid var(--border);
+  background: var(--background);
+  color: var(--foreground);
+  box-shadow: none;
 }
 
 @custom-variant dark (&:is(.dark *));
@@ -65,104 +65,123 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
-/* ── Light-first enterprise theme with dark mode support ── */
+/* ── Flat Design System — single light palette (designsystem.md) ──
+   Zero artificial depth. Hierarchy via size, color, and typography.
+   Blue = action, Emerald = support, Amber = highlight. No shadows. */
 :root {
-  --radius: 0.625rem;
-  --font-sans: system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-display: "Times New Roman", serif;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.18 0.01 240);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.18 0.01 240);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.18 0.01 240);
-  /* Teal primary (matches AtomAI teal accent) */
-  --primary: oklch(0.65 0.17 178);
-  --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.97 0.003 240);
-  --secondary-foreground: oklch(0.25 0.01 240);
-  --muted: oklch(0.97 0.003 240);
-  --muted-foreground: oklch(0.52 0.01 240);
-  --accent: oklch(0.97 0.003 240);
-  --accent-foreground: oklch(0.25 0.01 240);
-  --destructive: oklch(0.58 0.22 25);
-  --border: oklch(0.91 0.004 240);
-  --input: oklch(0.91 0.004 240);
-  --ring: oklch(0.65 0.17 178);
-  --chart-1: oklch(0.65 0.17 178);
-  --chart-2: oklch(0.60 0.18 160);
-  --chart-3: oklch(0.65 0.18 80);
-  --chart-4: oklch(0.55 0.22 300);
-  --chart-5: oklch(0.58 0.22 25);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.18 0.01 240);
-  --sidebar-primary: oklch(0.65 0.17 178);
-  --sidebar-primary-foreground: oklch(1 0 0);
-  --sidebar-accent: oklch(0.97 0.003 240);
-  --sidebar-accent-foreground: oklch(0.18 0.01 240);
-  --sidebar-border: oklch(0.91 0.004 240);
-  --sidebar-ring: oklch(0.65 0.17 178);
+  --radius: 0.5rem; /* rounded-lg (8px) baseline — consistent, moderate */
+  --font-sans: "Outfit", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
 
-  /* ─ Custom tokens for landing page ─ */
-  --teal: oklch(0.68 0.16 178);
-  --violet: oklch(0.52 0.23 293);
-  --impact-bg: oklch(0.96 0.04 178);
-  --impact-text: oklch(0.55 0.16 178);
-  --footer-bg: oklch(0.19 0.025 240);
-  --footer-fg: oklch(0.62 0.01 240);
+  --background: #FFFFFF;            /* Pure white — the canvas */
+  --foreground: #111827;           /* Gray 900 — sharp high-contrast text */
+  --card: #FFFFFF;
+  --card-foreground: #111827;
+  --popover: #FFFFFF;
+  --popover-foreground: #111827;
 
-  /* Smooth theme transitions */
+  /* Primary — Blue 500, the "action" color */
+  --primary: #3B82F6;
+  --primary-foreground: #FFFFFF;
+
+  /* Secondary — Emerald 500, supporting accent */
+  --secondary: #10B981;
+  --secondary-foreground: #FFFFFF;
+
+  /* Muted — Gray 100, secondary background blocks */
+  --muted: #F3F4F6;
+  --muted-foreground: #4B5563;     /* Gray 600 — readable on white/muted */
+
+  /* Accent — Amber 500, for highlights/badges */
+  --accent: #F59E0B;
+  --accent-foreground: #111827;
+
+  --destructive: #EF4444;          /* Red 500 */
+  --border: #E5E7EB;               /* Gray 200 — used sparingly */
+  --input: #E5E7EB;
+  --ring: #3B82F6;                 /* Solid blue focus ring */
+
+  /* Chart palette — flat, vibrant, controlled */
+  --chart-1: #3B82F6;  /* blue */
+  --chart-2: #10B981;  /* emerald */
+  --chart-3: #F59E0B;  /* amber */
+  --chart-4: #8B5CF6;  /* violet */
+  --chart-5: #EF4444;  /* red */
+
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #111827;
+  --sidebar-primary: #3B82F6;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #F3F4F6;
+  --sidebar-accent-foreground: #111827;
+  --sidebar-border: #E5E7EB;
+  --sidebar-ring: #3B82F6;
+
+  /* ─ Custom tokens for landing page (remapped to flat palette) ─ */
+  --teal: #3B82F6;
+  --violet: #8B5CF6;
+  --impact-bg: #EFF6FF;            /* Blue 50 — flat tint block */
+  --impact-text: #2563EB;          /* Blue 600 */
+  --footer-bg: #111827;            /* Gray 900 — dark color block */
+  --footer-fg: #9CA3AF;            /* Gray 400 */
+
   color-scheme: light;
 }
 
-/* ── Dark theme with WCAG 2.2 AA contrast ratios ── */
+/* ── Dark class mapped to the same flat light palette ──
+   The flat design system is a single light palette. The ThemeProvider
+   defaults to "system", so we neutralize .dark to the flat tokens to
+   keep the UI consistent and avoid a stale/broken dark theme. */
 .dark {
-  --background: oklch(0.12 0.01 240);
-  --foreground: oklch(0.95 0.01 240);
-  --card: oklch(0.18 0.01 240);
-  --card-foreground: oklch(0.95 0.01 240);
-  --popover: oklch(0.18 0.01 240);
-  --popover-foreground: oklch(0.95 0.01 240);
-  /* Teal primary — brightened for dark mode contrast */
-  --primary: oklch(0.72 0.15 178);
-  --primary-foreground: oklch(0.12 0.01 240);
-  --secondary: oklch(0.22 0.01 240);
-  --secondary-foreground: oklch(0.88 0.01 240);
-  --muted: oklch(0.28 0.01 240);
-  --muted-foreground: oklch(0.68 0.01 240);
-  --accent: oklch(0.22 0.01 240);
-  --accent-foreground: oklch(0.88 0.01 240);
-  --destructive: oklch(0.68 0.18 25);
-  --border: oklch(0.25 0.01 240);
-  --input: oklch(0.22 0.01 240);
-  --ring: oklch(0.72 0.15 178);
-  --chart-1: oklch(0.72 0.15 178);
-  --chart-2: oklch(0.68 0.16 160);
-  --chart-3: oklch(0.72 0.16 80);
-  --chart-4: oklch(0.62 0.20 300);
-  --chart-5: oklch(0.68 0.18 25);
-  --sidebar: oklch(0.15 0.01 240);
-  --sidebar-foreground: oklch(0.95 0.01 240);
-  --sidebar-primary: oklch(0.72 0.15 178);
-  --sidebar-primary-foreground: oklch(0.12 0.01 240);
-  --sidebar-accent: oklch(0.22 0.01 240);
-  --sidebar-accent-foreground: oklch(0.95 0.01 240);
-  --sidebar-border: oklch(0.25 0.01 240);
-  --sidebar-ring: oklch(0.72 0.15 178);
+  --background: #FFFFFF;
+  --foreground: #111827;
+  --card: #FFFFFF;
+  --card-foreground: #111827;
+  --popover: #FFFFFF;
+  --popover-foreground: #111827;
+  --primary: #3B82F6;
+  --primary-foreground: #FFFFFF;
+  --secondary: #10B981;
+  --secondary-foreground: #FFFFFF;
+  --muted: #F3F4F6;
+  --muted-foreground: #4B5563;
+  --accent: #F59E0B;
+  --accent-foreground: #111827;
+  --destructive: #EF4444;
+  --border: #E5E7EB;
+  --input: #E5E7EB;
+  --ring: #3B82F6;
+  --chart-1: #3B82F6;
+  --chart-2: #10B981;
+  --chart-3: #F59E0B;
+  --chart-4: #8B5CF6;
+  --chart-5: #EF4444;
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #111827;
+  --sidebar-primary: #3B82F6;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #F3F4F6;
+  --sidebar-accent-foreground: #111827;
+  --sidebar-border: #E5E7EB;
+  --sidebar-ring: #3B82F6;
 
-  color-scheme: dark;
+  --teal: #3B82F6;
+  --violet: #8B5CF6;
+  --impact-bg: #EFF6FF;
+  --impact-text: #2563EB;
+  --footer-bg: #111827;
+  --footer-fg: #9CA3AF;
+
+  color-scheme: light;
 }
 
-/* Scrollbar — light and dark mode aware */
+/* Scrollbar — flat gray */
 ::-webkit-scrollbar { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: oklch(0.82 0.01 260); border-radius: 3px; transition: background 200ms ease; }
-::-webkit-scrollbar-thumb:hover { background: oklch(0.72 0.02 260); }
+::-webkit-scrollbar-thumb { background: #D1D5DB; border-radius: 3px; transition: background 200ms ease; }
+::-webkit-scrollbar-thumb:hover { background: #9CA3AF; }
 
-.dark ::-webkit-scrollbar-thumb { background: oklch(0.35 0.01 240); }
-.dark ::-webkit-scrollbar-thumb:hover { background: oklch(0.45 0.02 240); }
-
-/* Smooth theme transition */
+/* Snappy, direct motion */
 html {
   transition: background-color 200ms ease, color 200ms ease;
 }
@@ -177,59 +196,37 @@ html {
   animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
-/* Gradient text — teal → violet, with dark mode support */
+/* Gradient text — flat, controlled blue → emerald. Used on display
+   headings only (never buttons/cards), so it stays within the system. */
 .text-gradient {
-  background: linear-gradient(90deg, #00C9A7 0%, #7C3AED 100%);
+  background: linear-gradient(90deg, #3B82F6 0%, #10B981 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.dark .text-gradient {
-  background: linear-gradient(90deg, #00E5C3 0%, #A78BFA 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* Impact stat card background */
+/* Impact stat block — flat blue tint, no shadow */
 .bg-impact {
-  background-color: oklch(0.96 0.04 178);
+  background-color: #EFF6FF;
 }
 
-.dark .bg-impact {
-  background-color: oklch(0.22 0.03 178);
-}
-
-/* Footer dark navy */
+/* Footer — dark gray color block */
 .bg-footer {
-  background-color: oklch(0.19 0.025 240);
+  background-color: #111827;
 }
 
-.dark .bg-footer {
-  background-color: oklch(0.1 0.01 240);
-}
-
-/* CTA section gradient */
+/* CTA section — solid flat blue color block (no vibrant gradient) */
 .bg-cta-gradient {
-  background: linear-gradient(135deg, #2563EB 0%, #7C3AED 100%);
+  background: #3B82F6;
 }
 
-.dark .bg-cta-gradient {
-  background: linear-gradient(135deg, #3B82F6 0%, #A78BFA 100%);
-}
-
-/* Section label — small teal label above headings */
+/* Section label — small blue uppercase label above headings */
 .section-label {
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: #00C9A7;
-}
-
-.dark .section-label {
-  color: #00E5C3;
+  color: #3B82F6;
 }
 
 /* Smooth section fade-in */
@@ -245,6 +242,29 @@ html {
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
+/* ── Flat design helpers ── */
+/* Scale-on-hover feedback (buttons/cards) — snappy, no depth */
+.flat-hover-card {
+  transition: all 200ms ease;
+  cursor: pointer;
+}
+.flat-hover-card:hover {
+  transform: scale(1.02);
+}
+.flat-hover-btn {
+  transition: all 200ms ease;
+}
+.flat-hover-btn:hover {
+  transform: scale(1.05);
+}
+/* Icon-in-circle treatment */
+.icon-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -253,9 +273,24 @@ html {
     @apply bg-background text-foreground;
     font-family: var(--font-sans);
   }
+  /* Typography as interface — geometric, bold, tight tracking */
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
   }
+}
+
+/* ── Zero artificial depth: strip box-shadows across the UI. ──
+   The Z-axis does not exist in flat design; hierarchy comes from
+   color, scale and type. This neutralizes Tailwind shadow-* utilities
+   and any inline shadows on common elements without touching markup. */
+.shadow-sm, .shadow, .shadow-md, .shadow-lg, .shadow-xl, .shadow-2xl,
+.shadow-xs, .drop-shadow, .drop-shadow-sm, .drop-shadow-md,
+.drop-shadow-lg, .drop-shadow-xl {
+  box-shadow: none !important;
+  filter: none !important;
 }
 
 .font-display {
