@@ -17,13 +17,18 @@ type GemmaResponseOptions = {
   fallback: GemmaJsonResult;
 };
 
+type GemmaTextResponseOptions = {
+  prompt: string;
+  fallback: string;
+};
+
 const gemmaApiKey = process.env.GEMMA_API_KEY;
 const gemmaClient = gemmaApiKey ? new GoogleGenerativeAI(gemmaApiKey) : null;
 
-// Gemma 4 model name. Falls back to gemini-1.5-flash if Gemma 4 is not yet
-// available on Google AI Studio in your region.
-const MODEL_NAME = process.env.GEMMA_MODEL || 'gemma-4';
-const FALLBACK_MODEL = 'gemini-1.5-flash';
+// Gemma 4 model name (Google AI Studio). Falls back to Gemini 2.5 Flash
+// when the Gemma model is not available in the current region.
+const MODEL_NAME = process.env.GEMMA_MODEL || 'gemma-4-31b-it';
+const FALLBACK_MODEL = 'gemini-2.5-flash';
 
 const extractJson = (text: string): GemmaJsonResult | null => {
   const trimmed = text.trim();
@@ -41,6 +46,11 @@ const extractJson = (text: string): GemmaJsonResult | null => {
   }
 };
 
+/**
+ * Calls Gemma (then the fallback model) and parses the reply as JSON.
+ * Falls back to the deterministic result when the model is missing or
+ * replies with something that is not valid JSON.
+ */
 const generateGemmaJson = async ({
   prompt,
   fallback,
@@ -56,14 +66,49 @@ const generateGemmaJson = async ({
     try {
       const model = gemmaClient.getGenerativeModel({ model: modelName });
       const result = await model.generateContent(prompt);
-      const text = result.response.text();
-      const parsed = extractJson(text);
-      if (parsed) return parsed;
+      const parsed = extractJson(result.response.text());
+      if (parsed) {
+        return parsed;
+      }
+      // The model answered, but its reply is not JSON — do not retry.
       return fallback;
     } catch (error) {
       lastError = error;
       // If the model isn't found, try the fallback model instead of failing.
-      continue;
+    }
+  }
+
+  console.error('Gemma AI error:', lastError);
+  return fallback;
+};
+
+/**
+ * Calls Gemma (then the fallback model) and returns the raw reply text.
+ * Used for prompts that ask for a document in plain text, such as the NIT.
+ */
+const generateGemmaText = async ({
+  prompt,
+  fallback,
+}: GemmaTextResponseOptions): Promise<string> => {
+  if (!gemmaClient) {
+    return fallback;
+  }
+
+  let lastError: unknown = null;
+
+  // Try Gemma 4 first, then fall back to Gemini 1.5 Flash.
+  for (const modelName of [MODEL_NAME, FALLBACK_MODEL]) {
+    try {
+      const model = gemmaClient.getGenerativeModel({ model: modelName });
+      const result = await model.generateContent(prompt);
+      const text = result.response.text().trim();
+      if (text) {
+        return text;
+      }
+      return fallback;
+    } catch (error) {
+      lastError = error;
+      // If the model isn't found, try the fallback model instead of failing.
     }
   }
 
@@ -120,7 +165,7 @@ Return ONLY valid JSON: {"waste_inr": number, "risk_score": number, "recommendat
 }
 
 /* ------------------------------------------------------------------ */
-/*  NIT generation (replaces Groq generateNIT)                        */
+/*  NIT generation                                                   */
 /* ------------------------------------------------------------------ */
 
 export async function generateNIT(projects: any[]): Promise<string> {
@@ -148,12 +193,8 @@ Scope of work: ${projects.map((p) => p.title).join(', ')}.
 Estimated combined cost: ₹${projects.reduce((s, p) => s + (p.cost || 0), 0).toLocaleString('en-IN')}.
 Timeline: 2026-03-01 to 2026-03-25.`;
 
-  const result = await generateGemmaJson({
-    prompt,
-    fallback: { nit: fallback },
-  });
-
-  return typeof result.nit === 'string' ? result.nit : fallback;
+  const nit = await generateGemmaText({ prompt, fallback });
+  return nit;
 }
 
 /* ------------------------------------------------------------------ */

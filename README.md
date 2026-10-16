@@ -71,8 +71,8 @@ Create `.env.local` (copy from `.env.example`). All values are optional — AI r
 ```env
 # AI (Google AI Studio)
 GEMMA_API_KEY=your_gemma_api_key_here
-# Optional: override the Gemma model name (default: gemma-4)
-# GEMMA_MODEL=gemma-4
+# Optional: override the Gemma model name (default: gemma-4-31b-it)
+# GEMMA_MODEL=gemma-4-31b-it
 
 # Translation (optional; static locales are used by default)
 TRANSLATION_PROVIDER=langbly        # langbly | libre
@@ -281,7 +281,7 @@ The camera-based AR view requires HTTPS, which Vercel provides automatically.
 
 **Map not showing** — ensure the dynamic import works; `components/MapView.tsx` loads `MapComponent` with `ssr: false`. Check the browser console for Leaflet errors.
 
-**Gemma 4 calls failing** — verify `GEMMA_API_KEY` and that the project has API access enabled in Google AI Studio. If `gemma-4` is not available in your region, the client falls back to `gemini-1.5-flash`. Routes return a deterministic fallback when no key is present.
+**Gemma 4 calls failing** — verify `GEMMA_API_KEY` and that the project has API access enabled in Google AI Studio. If the Gemma 4 model is not available in your region, the client falls back to `gemini-2.5-flash`. Routes return a deterministic fallback when no key is present.
 
 **Translations failing** — static locales live in `data/locales/*.json`. The server proxy needs `LANGBLY_API_KEY` or a reachable `LIBRETRANSLATE_URL`.
 

@@ -10,7 +10,7 @@ type GeminiResponseOptions = {
 const geminiApiKey = process.env.GEMINI_API_KEY;
 const geminiClient = geminiApiKey ? new GoogleGenerativeAI(geminiApiKey) : null;
 
-const MODEL_NAME = 'gemini-1.5-flash';
+const MODEL_NAME = 'gemini-2.5-flash';
 
 const extractJson = (text: string): GeminiJsonResult | null => {
   const trimmed = text.trim();

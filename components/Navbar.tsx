@@ -2,7 +2,7 @@
 
 import { useI18n } from '@/components/LanguageProvider';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
-import SidebarNav from '@/components/Sidebar';
+import Sidebar from '@/components/Sidebar';
 import { ThemeToggle } from '@/components/ThemeToggle';
 import { Button } from '@/components/ui/button';
 import {
@@ -35,7 +35,7 @@ export default function Navbar() {
           </SheetTrigger>
           <SheetContent side="left" className="w-64 p-0">
             <SheetTitle className="sr-only">{t('Navigation')}</SheetTitle>
-            <SidebarNav />
+            <Sidebar />
           </SheetContent>
         </Sheet>
 
