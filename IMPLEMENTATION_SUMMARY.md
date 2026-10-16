@@ -301,7 +301,7 @@ Result: Feedback loop visible in UI
 
 ### How Users Find Projects Hub
 ```
-Karana Platform Home
+Cevora Platform Home
         ↓
 Left Sidebar
         ↓
@@ -525,5 +525,5 @@ You got: **A production-like project management interface where:**
 
 **Built with**: Love for infrastructure coordination and π for accuracy.
 **Last Updated**: February 26, 2026
-**Platform**: Karana – AI-Powered Infrastructure Coordination
+**Platform**: Cevora – AI-Powered Infrastructure Coordination
 **For**: Gwalior City Administration

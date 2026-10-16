@@ -16,7 +16,7 @@ You are responsible for:
 
 ## 📍 Where to Find Projects Hub
 
-1. Open Karana Platform
+1. Open Cevora Platform
 2. Look at the left sidebar
 3. Click **📋 "Projects Hub"** (new option added)
 4. You'll see the Projects Lifecycle Hub with 3 tabs
@@ -368,4 +368,4 @@ A: Project instantly moves to Active tab, department gets notification, project 
 
 ---
 
-*Last Updated: February 2026 | Karana Platform | Gwalior City Administration*
+*Last Updated: February 2026 | Cevora Platform | Gwalior City Administration*

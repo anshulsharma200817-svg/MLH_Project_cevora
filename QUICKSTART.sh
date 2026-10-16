@@ -1,7 +1,7 @@
 #!/bin/bash
-# Karana Platform Quick Start Guide
+# Cevora Platform Quick Start Guide
 
-echo "🚀 Karana Platform - Quick Start"
+echo "🚀 Cevora Platform - Quick Start"
 echo "================================"
 echo ""
 

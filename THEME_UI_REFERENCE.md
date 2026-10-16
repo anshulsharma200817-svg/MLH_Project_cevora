@@ -4,7 +4,7 @@
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│  ≡  Karana  │              [Spacer]           │ Lang Theme Role│
+│  ≡  Cevora  │              [Spacer]           │ Lang Theme Role│
 ├─────────────────────────────────────────────────────────────┤
 │ Mobile    Logo           Main Content Area     
 │ Menu                     (Sidebar hidden
@@ -108,7 +108,7 @@ Step 3: Select an option
 ```
 Step 1: Portrait view - compact layout
 ┌─────────────────────────────────┐
-│ ≡  Karana    Theme  Language   │  ← Icons visible
+│ ≡  Cevora    Theme  Language   │  ← Icons visible
 ├─────────────────────────────────┤
 │ Dashboard (Full width)          │
 └─────────────────────────────────┘
@@ -437,7 +437,7 @@ Hover state (after 150ms):
 **A**: 200 milliseconds - fast enough to feel instant, slow enough to see the change is intentional.
 
 ### Q: Does my choice save?
-**A**: Yes! Stored in browser localStorage with key `karana.theme`. Persists across sessions.
+**A**: Yes! Stored in browser localStorage with key `cevora.theme`. Persists across sessions.
 
 ### Q: What if I use "System"?
 **A**: Your device's setting controls it. If your OS is in dark mode, the app shows dark. If light mode, the app is light.

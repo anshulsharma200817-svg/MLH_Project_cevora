@@ -2,7 +2,7 @@
 
 ## Overview
 
-The **Project Lifecycle Hub** is a new feature added to the Karana Platform that enables commissioners to view, analyze, and approve infrastructure projects across three lifecycle states: **Active**, **Completed**, and **Pending Approval**.
+The **Project Lifecycle Hub** is a new feature added to the Cevora Platform that enables commissioners to view, analyze, and approve infrastructure projects across three lifecycle states: **Active**, **Completed**, and **Pending Approval**.
 
 ## Key Features
 

@@ -125,7 +125,7 @@ export default function TenderPage() {
       const splitText = doc.splitTextToSize(nit, 170);
       doc.text(splitText, 20, 35);
 
-      doc.save('karana-nit.pdf');
+      doc.save('cevora-nit.pdf');
     } catch (error) {
       console.error('Error generating NIT:', error);
     }

@@ -19,9 +19,9 @@ const PARTNERS = ['PWD Gwalior', 'Water Board', 'BESCOM MP', 'Municipal Corp', '
 const FEATURE_SECTIONS = [
   {
     id: 'working',
-    label: 'Working with Karana',
+    label: 'Working with Cevora',
     heading: 'Clash-Free Infrastructure Coordination',
-    description: 'Effortlessly manage assets, project zones, and inter-department scheduling — bringing everyone onto a single real-time platform.',
+    description: 'One real-time map for every department. Cevora surfaces scheduling collisions and utility overlaps before the first dig, so teams stop duplicating work and wasting crores.',
     mockupIcon: LayoutDashboard,
     mockupLabel: 'Commissioner Dashboard · Gwalior, MP',
     cards: [
@@ -37,7 +37,7 @@ const FEATURE_SECTIONS = [
         iconBg: '#E8F0FF',
         iconColor: '#3B5BDB',
         title: 'Built-in Clash Detection',
-        body: 'Karana automatically analyses spatial and temporal data across departments, flagging road cuts, utility overlaps, and scheduling collisions before they happen.',
+        body: 'Cevora automatically analyses spatial and temporal data across departments, flagging road cuts, utility overlaps, and scheduling collisions before they happen.',
       },
       {
         icon: FileText,
@@ -50,7 +50,7 @@ const FEATURE_SECTIONS = [
   },
   {
     id: 'planning',
-    label: 'Creating an Infrastructure Plan in Karana',
+    label: 'Creating an Infrastructure Plan in Cevora',
     heading: 'Map Every Project. Miss Nothing.',
     description: 'Visualise the full infrastructure landscape of Gwalior on a live GIS map, with department-coded layers, clash halos, and on-demand export.',
     mockupIcon: Map,
@@ -81,7 +81,7 @@ const FEATURE_SECTIONS = [
   },
   {
     id: 'reporting',
-    label: 'Reporting in Karana',
+    label: 'Reporting in Cevora',
     heading: 'AI Risk Scoring. One-Click Reports.',
     description: 'Submit a tender and get a Groq-powered LLM risk score in under three seconds. Generate compliant NIT PDFs without manual formatting.',
     mockupIcon: Brain,
@@ -193,7 +193,7 @@ export default function Home() {
                 <Zap className="h-4 w-4 text-primary-foreground" aria-hidden="true" />
               </div>
               <span className="text-[15px] font-bold text-foreground">
-                {t('Karana')}<span className="text-[10px] font-normal text-muted-foreground ml-1">{t('Solutions')}</span>
+                {t('Cevora')}
               </span>
             </Link>
 
@@ -249,9 +249,9 @@ export default function Home() {
         <section className="relative overflow-hidden bg-white">
           <div className="pointer-events-none absolute inset-0 -z-10" style={{ background: 'radial-gradient(ellipse 80% 60% at 50% -10%, rgba(0,201,167,0.08) 0%, transparent 70%)' }} aria-hidden="true" />
           <div className="mx-auto max-w-6xl px-4 lg:px-8 pt-12 pb-8 text-center">
-            <p className="section-label mb-4">{t('About Karana Platform')}</p>
+            <p className="section-label mb-4">{t('AI-Powered Infrastructure Coordination')}</p>
             <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl leading-[1.12] text-[#1a2433]">
-              {t('Workflows')}<br /><span className="text-gradient">{t('Made Effortless')}</span><br />{t('With Karana')}
+              {t('Workflows')}<br /><span className="text-gradient">{t('Made Effortless')}</span><br />{t('With Cevora')}
             </h1>
             <p className="mx-auto mt-5 max-w-xl text-[15px] text-gray-500 leading-relaxed">
               {t('Effortlessly manage assets, project zones, inter-department clashes, and tender workflows — with built-in AI to surface risk before it becomes cost.')}
@@ -301,7 +301,7 @@ export default function Home() {
                     <span className="h-2.5 w-2.5 rounded-full bg-yellow-400" aria-hidden="true" />
                     <span className="h-2.5 w-2.5 rounded-full bg-green-400" aria-hidden="true" />
                     <div className="ml-4 flex-1 rounded-md bg-white border border-gray-200 px-3 py-1 text-[11px] text-gray-400">
-                      karana-platform.gov.in/{section.id}
+                      cevora-platform.gov.in/{section.id}
                     </div>
                   </div>
                   <div className="relative flex items-center justify-center" style={{ minHeight: '200px', background: 'linear-gradient(135deg, rgba(0,201,167,0.04) 0%, rgba(124,58,237,0.04) 100%)' }}>
@@ -369,7 +369,7 @@ export default function Home() {
                       <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl" style={{ background: '#F3EEFF' }} aria-hidden="true">
                         <ArrowRight className="h-5 w-5" style={{ color: '#7C3AED' }} />
                       </div>
-                      <h3 className="text-[13.5px] font-bold text-gradient mb-1.5">{t('Learn more with Karana today!')}</h3>
+                      <h3 className="text-[13.5px] font-bold text-gradient mb-1.5">{t('Learn more with Cevora today!')}</h3>
                       <p className="text-[12.5px] text-gray-500 leading-relaxed">
                         {t('Explore the full platform. Open the live demo to see every feature in action.')}
                       </p>
@@ -391,7 +391,7 @@ export default function Home() {
             <div className="mb-10 text-center">
               <p className="section-label mb-3">{t('Our Impact')}</p>
               <h2 id="impact-heading" className="text-3xl font-extrabold tracking-tight lg:text-4xl text-[#1a2433]">
-                {t('Karana drives impact by streamlining')} <span className="text-gradient">{t('infrastructure management')}</span>,<br />
+                {t('Cevora drives impact by streamlining')} <span className="text-gradient">{t('infrastructure management')}</span>,<br />
                 {t('coordination planning, and public savings.')}
               </h2>
             </div>
@@ -407,12 +407,12 @@ export default function Home() {
           </div>
         </section>
 
-        {/* WHY KARANA */}
+        {/* WHY CEVORA */}
         <section className="bg-[#FAFAFA]" aria-labelledby="why-heading">
           <div className="mx-auto max-w-6xl px-4 lg:px-8 py-16 lg:py-20">
-            <p className="section-label text-center mb-3">{t('Why with Karana')}</p>
+            <p className="section-label text-center mb-3">{t('Why with Cevora')}</p>
             <h2 id="why-heading" className="text-3xl font-extrabold tracking-tight text-center lg:text-4xl text-[#1a2433] mb-12">
-              {t('More about Karana and its features.')}
+              {t('More about Cevora and its features.')}
               <span className="text-gradient">{t('Let\'s learn!')}</span>
             </h2>
 
@@ -440,7 +440,7 @@ export default function Home() {
               <div className="grid grid-cols-2 gap-4">
                 {[
                   { icon: ShieldCheck, iconBg: '#E0FFF8', iconColor: '#00A88E', label: 'A Familiar & Intuitive Experience Users Know', sub: 'Roles for Commissioner, Dept Head, Field Engineer & Tender Officer.' },
-                  { icon: Users, iconBg: '#E8F0FF', iconColor: '#3B5BDB', label: 'Onboarded Thousands of Departments', sub: 'Karana streamlines workflows so teams adopt fast and operate with efficiency.' },
+                  { icon: Users, iconBg: '#E8F0FF', iconColor: '#3B5BDB', label: 'Onboarded Thousands of Departments', sub: 'Cevora streamlines workflows so teams adopt fast and operate with efficiency.' },
                   { icon: Globe, iconBg: '#FFF3E0', iconColor: '#E07C24', label: 'GatiShakti-Compliant Architecture', sub: 'Fully aligned with the national infrastructure master plan framework.' },
                   { icon: AlertTriangle, iconBg: '#FFF0F5', iconColor: '#D63B6A', label: 'Risk Surfaced Before It Becomes Cost', sub: 'AI scoring in under 3 seconds means no clash goes undetected.' },
                 ].map((item) => {
@@ -490,7 +490,7 @@ export default function Home() {
               {t('Ready to Transform Your')}<br />{t('Infrastructure Operations?')}
             </h2>
             <p className="mx-auto mt-4 max-w-md text-[14.5px] text-white/75 leading-relaxed">
-              {t('Discover how Karana can streamline coordination, save time, and cut crores in costs. See the full platform in action.')}
+              {t('Discover how Cevora can streamline coordination, save time, and cut crores in costs. See the full platform in action.')}
             </p>
             <div className="mt-8 flex items-center justify-center">
               <Link href="/dashboard" className="inline-flex items-center gap-2 rounded-lg bg-white px-7 py-3 text-sm font-semibold text-[#2563EB] hover:bg-blue-50 transition-colors">
@@ -510,7 +510,7 @@ export default function Home() {
                 <div className="flex h-7 w-7 items-center justify-center rounded-lg" style={{ background: 'linear-gradient(135deg, #00C9A7 0%, #7C3AED 100%)' }}>
                   <Zap className="h-3.5 w-3.5 text-white" aria-hidden="true" />
                 </div>
-                <span className="text-[14px] font-bold text-white">Karana</span>
+                <span className="text-[14px] font-bold text-white">Cevora</span>
               </Link>
               <p className="text-[12px] leading-relaxed" style={{ color: '#8494a9' }}>
                 {t('Powering Intelligent Infrastructure Coordination for a smarter, efficient India.')}
@@ -540,7 +540,7 @@ export default function Home() {
 
           <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
             <p className="text-[11.5px]" style={{ color: '#8494a9' }}>
-              {t('© 2026 Karana Platform · AI Innovation Sprint · Gwalior, Madhya Pradesh')}
+              {t('© 2026 Cevora Platform · AI Innovation Sprint · Gwalior, Madhya Pradesh')}
             </p>
             <p className="text-[11.5px]" style={{ color: '#8494a9' }}>
               {t('Built for PM GatiShakti National Master Plan')}

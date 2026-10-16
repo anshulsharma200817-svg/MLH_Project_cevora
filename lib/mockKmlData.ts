@@ -1,5 +1,5 @@
 /**
- * KARANA PLATFORM — Mock KML Data Index
+ * CEVORA PLATFORM — Mock KML Data Index
  *
  * Metadata for the 22 pre-built Gwalior infrastructure project KML files.
  * Used to auto-load demo data and seed the folder tree.

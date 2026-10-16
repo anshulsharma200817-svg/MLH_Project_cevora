@@ -56,7 +56,7 @@ export default function Sidebar() {
       <Separator />
       <div className="px-4 py-3">
         <p className="text-[11px] text-muted-foreground text-center">
-          {t('Karana Platform')} &middot; {t('GatiShakti Ready')}
+          {t('Cevora Platform')} &middot; {t('GatiShakti Ready')}
         </p>
       </div>
     </aside>

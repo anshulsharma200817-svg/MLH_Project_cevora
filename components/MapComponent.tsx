@@ -1,7 +1,7 @@
-﻿'use client';
+'use client';
 
 /**
- * KARANA PLATFORM — Live Map Component
+ * CEVORA PLATFORM — Live Map Component
  *
  * Light-theme map page matching the app's professional UI.
  * - White/light backgrounds, shadcn-style borders
@@ -429,7 +429,7 @@ function ProjectGeometryLayer({ projects, enabledLayers }: ProjectGeometryLayerP
             onEachFeature: (_feat, layer) => {
               layer.bindTooltip(
                 `<strong>${proj.title}</strong><br/>${wt.label} — ${proj.dept}`,
-                { sticky: true, className: 'karana-tooltip' },
+                { sticky: true, className: 'cevora-tooltip' },
               );
             },
           },
@@ -805,7 +805,7 @@ export default function MapComponent() {
       return;
     }
     const lines: string[] = [
-      'KARANA PRIORITY EXECUTION REPORT',
+      'CEVORA PRIORITY EXECUTION REPORT',
       `Generated: ${new Date().toLocaleString()}`,
       `Total Projects: ${projects.length}`,
       `Conflicts: ${clashCount}`,
@@ -825,7 +825,7 @@ export default function MapComponent() {
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `karana-priority-report-${Date.now()}.txt`;
+    a.download = `cevora-priority-report-${Date.now()}.txt`;
     a.click();
     URL.revokeObjectURL(url);
     addToast('Report exported', 'success');

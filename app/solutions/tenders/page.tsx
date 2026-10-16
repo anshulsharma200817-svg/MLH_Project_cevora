@@ -18,7 +18,7 @@ const FEATURE_CARDS = [
     iconBg: '#E0FFF8',
     iconColor: '#00A88E',
     title: 'One-Click NIT Generation',
-    body: 'Karana generates compliant Notice Inviting Tender (NIT) PDFs directly from clash detection reports and tender metadata—no manual formatting needed.',
+    body: 'Cevora generates compliant Notice Inviting Tender (NIT) PDFs directly from clash detection reports and tender metadata—no manual formatting needed.',
   },
   {
     icon: DollarSign,
@@ -67,7 +67,7 @@ export default function TendersSolution() {
               <Zap className="h-4 w-4 text-white" aria-hidden="true" />
             </div>
             <span className="text-[15px] font-bold text-[#1a2433]">
-              {t('Karana')}<span className="text-[10px] font-normal text-gray-400 ml-1">{t('Solutions')}</span>
+              {t('Cevora')}<span className="text-[10px] font-normal text-gray-400 ml-1">{t('Solutions')}</span>
             </span>
           </Link>
 
@@ -307,7 +307,7 @@ export default function TendersSolution() {
 
           <div className="pt-6 text-center">
             <p className="text-[11.5px]" style={{ color: '#8494a9' }}>
-              {t('© 2026 Karana Platform · Gwalior, Madhya Pradesh · Built for PM GatiShakti')}
+              {t('© 2026 Cevora Platform · Gwalior, Madhya Pradesh · Built for PM GatiShakti')}
             </p>
           </div>
         </div>

@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Karana platform now includes a **professional light/dark theme toggle** inspired by the shadcn/ui design system. Users can seamlessly switch between light, dark, or system-preferred themes with automatic persistence.
+The Cevora platform now includes a **professional light/dark theme toggle** inspired by the shadcn/ui design system. Users can seamlessly switch between light, dark, or system-preferred themes with automatic persistence.
 
 ## ✨ Features
 
@@ -120,7 +120,7 @@ Using custom CSS:
 
 1. **Theme Provider Wrapper** (`ThemeProvider.tsx`)
    - Wraps entire app at root layout
-   - Handles localStorage persistence with key `karana.theme`
+   - Handles localStorage persistence with key `cevora.theme`
    - Automatically detects system theme preference
 
 2. **Theme Toggle Button** (`ThemeToggle.tsx`)
@@ -141,7 +141,7 @@ Using custom CSS:
 
 ### Storage Details
 
-**localStorage Key**: `karana.theme`
+**localStorage Key**: `cevora.theme`
 
 **Stored Values**:
 - `"light"` - Light theme forced
@@ -251,7 +251,7 @@ Example: `oklch(0.65 0.17 178)` = Medium saturation teal
 - [ ] Select "System" - verify system preference respected
 - [ ] Refresh page - verify saved theme persists
 - [ ] Open in new tab - verify same theme applies
-- [ ] Check localStorage in DevTools - see `karana.theme` key
+- [ ] Check localStorage in DevTools - see `cevora.theme` key
 - [ ] Test on mobile - verify button accessible
 - [ ] Test keyboard navigation - Tab/Enter/Arrows work
 - [ ] Test with screen reader - theme selection announced
@@ -269,7 +269,7 @@ Example: `oklch(0.65 0.17 178)` = Medium saturation teal
 
 3. **Check localStorage**:
    - DevTools → Application → Storage → localStorage
-   - Look for `karana.theme` key
+   - Look for `cevora.theme` key
 
 ### Performance Testing
 
@@ -297,7 +297,7 @@ Example: `oklch(0.65 0.17 178)` = Medium saturation teal
 **Solutions**:
 1. Check if localStorage is enabled in browser
 2. Check browser console for localStorage errors
-3. Verify `storageKey="karana.theme"` in ThemeProvider
+3. Verify `storageKey="cevora.theme"` in ThemeProvider
 4. Clear browser cache and try again
 
 ### Flash of Wrong Theme

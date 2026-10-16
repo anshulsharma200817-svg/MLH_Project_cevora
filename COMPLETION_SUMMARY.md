@@ -448,5 +448,5 @@ Navigate to `/projects` and experience it yourself!
 ---
 
 *Last Updated: February 26, 2026*  
-*For: Karana Platform Hackathon*  
+*For: Cevora Platform Hackathon*  
 *Status: ✅ Production-Ready MVP*

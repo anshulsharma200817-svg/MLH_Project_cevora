@@ -3,7 +3,7 @@
 ## Updated Workspace Structure
 
 ```
-e:\Code\karana\
+e:\Code\cevora\
 ├── 📄 package.json                      (unchanged)
 ├── 📄 tsconfig.json                     (unchanged)
 ├── 📄 next.config.ts                    (unchanged)

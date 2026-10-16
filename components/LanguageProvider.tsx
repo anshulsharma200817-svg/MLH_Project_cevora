@@ -22,7 +22,7 @@ type LanguageContextValue = {
 
 const LanguageContext = createContext<LanguageContextValue | undefined>(undefined);
 
-const LANGUAGE_KEY = 'karana.i18n.language';
+const LANGUAGE_KEY = 'cevora.i18n.language';
 
 const options: LanguageOption[] = [
   { code: 'en', label: 'English' },

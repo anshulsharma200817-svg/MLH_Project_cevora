@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * KARANA PLATFORM — FolderTree Component
+ * CEVORA PLATFORM — FolderTree Component
  *
  * Google Earth Pro-style folder/project manager for the right panel.
  * Supports: create/rename/delete folders, add/move/remove/toggle projects.

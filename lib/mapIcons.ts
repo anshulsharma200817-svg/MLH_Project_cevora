@@ -1,5 +1,5 @@
 /**
- * KARANA PLATFORM — Map Icon Factories
+ * CEVORA PLATFORM — Map Icon Factories
  *
  * Generates Leaflet DivIcons and HTML popups for work-type markers.
  * Uses inline SVG icons instead of emoji characters.

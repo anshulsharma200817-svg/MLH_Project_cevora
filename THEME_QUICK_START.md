@@ -2,7 +2,7 @@
 
 ## 🎉 What Was Just Completed
 
-You now have a **professional, production-ready light/dark theme system** for the Karana platform, inspired by the shadcn/ui design system.
+You now have a **professional, production-ready light/dark theme system** for the Cevora platform, inspired by the shadcn/ui design system.
 
 ### ✨ Key Features Delivered
 
@@ -22,7 +22,7 @@ You now have a **professional, production-ready light/dark theme system** for th
 ## 🚀 Quick Start
 
 ### 1. View the Theme Toggle
-- Open the Karana platform
+- Open the Cevora platform
 - Look in the **top-right header** next to the language switcher
 - See the **moon/sun icon** - that's your theme toggle!
 
@@ -105,7 +105,7 @@ THEME_COLOR_PALETTE.md         - Color palette reference
 | Metric | Value |
 |--------|-------|
 | **Theme Switch Time** | 200ms (smooth) |
-| **Storage Key** | `karana.theme` |
+| **Storage Key** | `cevora.theme` |
 | **Min Contrast (Light)** | 8.5:1 |
 | **Min Contrast (Dark)** | 10.2:1 |
 | **Supported Browsers** | All modern (Chrome, Firefox, Safari 14+) |
@@ -208,7 +208,7 @@ setTheme('dark'); // or 'light' or 'system'
 
 ### "Theme doesn't persist"
 → Check browser localStorage is enabled  
-→ Look for `karana.theme` in DevTools → Storage → localStorage
+→ Look for `cevora.theme` in DevTools → Storage → localStorage
 
 ### "Theme appears wrong on load"
 → This should NOT happen - suppressHydrationWarning is configured  
@@ -283,6 +283,6 @@ All questions answered in the documentation files:
 
 **Status**: ✅ **PRODUCTION READY**
 
-Made with ❤️ for the Karana infrastructure coordination platform.
+Made with ❤️ for the Cevora infrastructure coordination platform.
 
 *Last updated: February 24, 2026*

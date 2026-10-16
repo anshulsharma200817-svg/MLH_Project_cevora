@@ -103,7 +103,7 @@
 
 ### Persistence ✅
 - [x] Theme saved to localStorage
-- [x] Key: `karana.theme`
+- [x] Key: `cevora.theme`
 - [x] Persists across page reloads
 - [x] Works across multiple tabs
 - [x] Survives browser restart
@@ -327,7 +327,7 @@ Before deploying to production:
 
 ### What Was Delivered
 
-✅ **Complete light/dark theme system** for Karana platform  
+✅ **Complete light/dark theme system** for Cevora platform  
 ✅ **Professional UI/UX** inspired by shadcn/ui  
 ✅ **WCAG 2.2 Level AA compliance** across both themes  
 ✅ **Persistent user preference** with system detection  

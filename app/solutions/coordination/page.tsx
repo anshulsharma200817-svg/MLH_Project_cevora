@@ -76,7 +76,7 @@ export default function CoordinationSolution() {
               <Zap className="h-4 w-4 text-white" aria-hidden="true" />
             </div>
             <span className="text-[15px] font-bold text-[#1a2433]">
-              {t('Karana')}<span className="text-[10px] font-normal text-gray-400 ml-1">{t('Solutions')}</span>
+              {t('Cevora')}<span className="text-[10px] font-normal text-gray-400 ml-1">{t('Solutions')}</span>
             </span>
           </Link>
 
@@ -113,7 +113,7 @@ export default function CoordinationSolution() {
           <div className="mx-auto max-w-6xl px-4 lg:px-8 pt-20 pb-12 text-center">
             <p className="section-label mb-4">{t('Coordination & Clash Detection')}</p>
             <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl leading-[1.12] text-[#1a2433]">
-              {t('Multi-Department')}<br /><span className="text-gradient">{t('Coordination Effortless')}</span><br />{t('With Karana')}
+              {t('Multi-Department')}<br /><span className="text-gradient">{t('Coordination Effortless')}</span><br />{t('With Cevora')}
             </h1>
             <p className="mx-auto mt-5 max-w-2xl text-[15px] text-gray-500 leading-relaxed">
               {t('Stop clash-driven delays. Get real-time visibility across all 6+ departments, AI-powered clash detection, and instant conflict resolution—all on one platform. From Gwalior to any city.')}
@@ -150,7 +150,7 @@ export default function CoordinationSolution() {
                 <span className="h-2.5 w-2.5 rounded-full bg-yellow-400" aria-hidden="true" />
                 <span className="h-2.5 w-2.5 rounded-full bg-green-400" aria-hidden="true" />
                 <div className="ml-4 flex-1 rounded-md bg-white border border-gray-200 px-3 py-1 text-[11px] text-gray-400">
-                  karana-platform.gov.in/coordination
+                  cevora-platform.gov.in/coordination
                 </div>
               </div>
               <div className="relative flex items-center justify-center" style={{ minHeight: '240px', background: 'linear-gradient(135deg, rgba(0,201,167,0.04) 0%, rgba(124,58,237,0.04) 100%)' }}>
@@ -358,7 +358,7 @@ export default function CoordinationSolution() {
 
           <div className="pt-6 text-center">
             <p className="text-[11.5px]" style={{ color: '#8494a9' }}>
-              {t('© 2026 Karana Platform · Gwalior, Madhya Pradesh · Built for PM GatiShakti')}
+              {t('© 2026 Cevora Platform · Gwalior, Madhya Pradesh · Built for PM GatiShakti')}
             </p>
           </div>
         </div>

@@ -175,7 +175,7 @@ export default function DashboardPage() {
   };
 
   const sendUpdateEmail = async () => {
-    const subject = t('Karana update: clash summary and alerts');
+    const subject = t('Cevora update: clash summary and alerts');
     const text = [
       `${t('Active clashes')}: ${clashingProjects.length}`,
       `${t('Total waste risk')}: ₹${(wasteRisk / 10000000).toFixed(1)}Cr`,
@@ -184,7 +184,7 @@ export default function DashboardPage() {
 
     const html = `
       <div style="font-family:Arial,sans-serif">
-        <h2>${t('Karana update')}</h2>
+        <h2>${t('Cevora update')}</h2>
         <p>${t('Active clashes')}: <strong>${clashingProjects.length}</strong></p>
         <p>${t('Total waste risk')}: <strong>₹${(wasteRisk / 10000000).toFixed(1)}Cr</strong></p>
         <p>${t('Latest alert log entries')}: <strong>${alertLog.length}</strong></p>

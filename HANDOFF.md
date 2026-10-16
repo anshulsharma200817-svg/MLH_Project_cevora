@@ -405,4 +405,4 @@ You have everything you need to win. Now go show those judges what's possible! �
 
 *Delivered with love for infrastructure coordination*  
 *February 26, 2026*  
-*Karana Platform – Gwalior City AI Initiative*
+*Cevora Platform – Gwalior City AI Initiative*

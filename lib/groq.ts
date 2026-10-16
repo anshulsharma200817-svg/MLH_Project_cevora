@@ -1,8 +1,7 @@
 import { Groq } from 'groq-sdk';
 
-const groq = new Groq({
-  apiKey: process.env.GROQ_API_KEY,
-});
+const groqApiKey = process.env.GROQ_API_KEY;
+const groq = groqApiKey ? new Groq({ apiKey: groqApiKey }) : null;
 
 export async function scoreRisk(params: {
   project_title: string;
@@ -24,6 +23,16 @@ Calculate and provide in JSON format only (no markdown, no explanation):
 3. Recommended action: "merge", "sequence", or "optimize"
 
 Return ONLY valid JSON: {"waste_inr": number, "risk_score": number, "recommendation": "string"}`;
+
+  const fallback = {
+    waste_inr: Math.round(params.combined_cost * 0.2),
+    risk_score: 8,
+    recommendation: 'merge',
+  };
+
+  if (!groq) {
+    return fallback;
+  }
 
   try {
     const message = await groq.chat.completions.create({
@@ -57,15 +66,16 @@ Return ONLY valid JSON: {"waste_inr": number, "risk_score": number, "recommendat
     console.error('Error calling Groq:', error);
   }
 
-  // Fallback response
-  return {
-    waste_inr: Math.round(params.combined_cost * 0.2),
-    risk_score: 8,
-    recommendation: 'merge'
-  };
+  return fallback;
 }
 
 export async function generateNIT(projects: any[]): Promise<string> {
+  const fallback = 'NIT document could not be generated';
+
+  if (!groq) {
+    return fallback;
+  }
+
   const projectsText = projects
     .map(p => `- ${p.dept}: ${p.title} (₹${p.cost.toLocaleString('en-IN')})`)
     .join('\n');
@@ -75,7 +85,7 @@ export async function generateNIT(projects: any[]): Promise<string> {
 ${projectsText}
 
 Include in plain text format:
-1. NIT number: NIT/KARANA/2026/001
+1. NIT number: NIT/CEVORA/2026/001
 2. Scope of work for all departments
 3. Estimated combined cost in INR
 4. Timeline (start: 2026-03-01, end: 2026-03-25)
@@ -104,5 +114,5 @@ Keep response under 300 words.`;
     console.error('Error generating NIT with Groq:', error);
   }
 
-  return 'NIT document could not be generated';
+  return fallback;
 }

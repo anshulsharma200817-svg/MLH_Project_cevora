@@ -1,5 +1,5 @@
 /**
- * KARANA PLATFORM — Work Type Definitions
+ * CEVORA PLATFORM — Work Type Definitions
  *
  * Each work type has a unique color, SVG icon path (lucide-compatible),
  * depth-layer classification, and a base priority that encodes the
