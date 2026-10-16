@@ -26,7 +26,7 @@ Karana is a hackathon MVP platform designed for Gwalior, Madhya Pradesh, India. 
 - **Framework**: Next.js 15 (App Router) + TypeScript
 - **Styling**: Tailwind CSS 4 + glassmorphic theme
 - **Maps**: Leaflet.js + React-Leaflet + OpenStreetMap
-- **AI**: Groq SDK (llama-3.1-8b-instant)
+- **AI**: Gemma 4 via Google AI Studio (`@google/generative-ai`)
 - **PDF Export**: jsPDF
 - **Voice**: Web Speech API
 - **Deploy**: Vercel
@@ -41,14 +41,15 @@ npm install
 
 ### 2. Setup Environment
 
-Create `.env.local`:
+Create `.env.local` (copy from `.env.example`):
 
 ```env
-GROQ_API_KEY=your_groq_api_key_here
-GEMINI_API_KEY=your_gemini_api_key_here
-# i18n uses static JSON locales by default (no API needed)
-# Optional: use LibreTranslate by wiring /api/translate in custom flows
-LIBRETRANSLATE_URL=http://localhost:5000
+# ── Gemma 4 AI (Google AI Studio) ───────────────────────────────────────────
+GEMMA_API_KEY=your_gemma_api_key_here
+# Optional: override the Gemma model name (default: gemma-4)
+# GEMMA_MODEL=gemma-4
+
+# ── Optional services ─────────────────────────────────────────────────────────
 NTFY_SERVER=https://ntfy.sh
 NTFY_TOPIC=karana-demo-alerts
 EMAIL_PROVIDER=resend
@@ -57,10 +58,14 @@ EMAIL_FROM=alerts@your-domain.example
 EMAIL_TO=your_recipient_email
 NEXT_PUBLIC_SUPABASE_URL=optional
 NEXT_PUBLIC_SUPABASE_ANON_KEY=optional
+LIBRETRANSLATE_URL=http://localhost:5000
 ```
 
-Get your GROQ_API_KEY from [console.groq.com](https://console.groq.com)
-Get your GEMINI_API_KEY from [Google AI Studio](https://aistudio.google.com/)
+Get your **GEMMA_API_KEY** from [Google AI Studio](https://aistudio.google.com/)
+
+> 🔑 Your API key is already configured in `.env.local` for local development.
+> Do not commit `.env.local` — it is gitignored. On Vercel, add `GEMMA_API_KEY`
+> in Project Settings → Environment Variables.
 
 ### 3. Run Development Server
 
@@ -77,14 +82,48 @@ npm run build
 npm start
 ```
 
-## 🚀 Deploy to Vercel
+## 🚀 Deploy to Vercel (Recommended)
+
+Vercel is the recommended deployment platform for this Next.js 15 app. It offers
+automatic HTTPS, global edge network, and a Mumbai region (`bom1`) for low
+latency in India.
+
+### Option A: Deploy via Vercel CLI
 
 ```bash
 npm install -g vercel
 vercel
 ```
 
-Add environment variables in Vercel project settings.
+Follow the prompts, then add `GEMMA_API_KEY` in your Vercel project settings
+(Project Settings → Environment Variables).
+
+### Option B: Deploy via GitHub (Vercel Integration)
+
+1. Push this repo to GitHub.
+2. Go to [vercel.com](https://vercel.com) and import the repository.
+3. Vercel auto-detects Next.js 15 — no build settings needed.
+4. Add `GEMMA_API_KEY` in Project Settings → Environment Variables.
+5. Click Deploy.
+
+### Environment variables required on Vercel
+
+| Variable | Required | Description |
+|----------|----------|-------------|
+| `GEMMA_API_KEY` | ✅ Yes | Your Google AI Studio API key |
+| `GEMMA_MODEL` | ❌ No | Model name (default: `gemma-4`) |
+| `NTFY_SERVER` | ❌ No | Push notification server (default: `https://ntfy.sh`) |
+| `NTFY_TOPIC` | ❌ No | ntfy topic name |
+| `RESEND_API_KEY` | ❌ No | Email API key (Resend) |
+| `EMAIL_FROM` | ❌ No | Sender email address |
+| `EMAIL_TO` | ❌ No | Recipient email address |
+
+### Alternative deployment platforms
+
+- **Netlify**: Supports Next.js via [Next.js runtime](https://docs.netlify.com/integrations/frameworks/next-js/). Add env vars in Site Settings → Environment variables.
+- **Railway**: Connect GitHub repo, add env vars, deploy. Good for India-proximate regions.
+- **Render**: Supports Next.js web services. Add env vars in the dashboard.
+- **Self-hosted**: Run `npm run build && npm start` on any Node.js 20+ server.
 
 ## 🗂️ Project Structure
 
@@ -98,8 +137,17 @@ app/                           # Next.js App Router
 ├── contractor/page.tsx        # Scorecard
 └── api/                       # API Routes
     ├── clashes/route.ts       # Clash detection
-    ├── score-risk/route.ts    # Groq risk scoring
-    └── generate-nit/route.ts  # Groq NIT generation
+    ├── score-risk/route.ts    # Gemma 4 risk scoring
+    ├── generate-nit/route.ts  # Gemma 4 NIT generation
+    ├── ai-monitoring/route.ts # Gemma 4 monitoring insights
+    ├── ai-coordination/route.ts # Gemma 4 coordination plan
+    ├── ai-triggering/route.ts   # Gemma 4 triggering response
+    ├── map-monitoring/route.ts  # Gemma 4 map monitoring
+    ├── map-layouting/route.ts   # Gemma 4 map layouting
+    ├── ai-decision/route.ts     # Gemma 4 decisioning
+    ├── translate/route.ts       # Translation proxy
+    ├── notify/route.ts          # Push notifications
+    └── email/route.ts           # Email via Resend
 
 components/                    # React components
 ├── MapView.tsx               # Leaflet wrapper
@@ -222,7 +270,7 @@ Email updates via Resend
 - ✅ No real APIs (mock data only)
 - ✅ No auth complexity (role dropdown instead)
 - ✅ Works offline after build
-- ✅ Groq API fallback responses
+- ✅ Gemma 4 API fallback responses (if AI key missing)
 - ✅ Everything builds in < 1 minute
 
 ## 🐛 Troubleshooting
@@ -231,13 +279,10 @@ Email updates via Resend
 - Check browser console for errors
 - Ensure dynamic import worked: MapView.tsx uses `ssr: false`
 
-**Groq calls failing?**
-- Verify `.env.local` has `GROQ_API_KEY`
-- API returns fallback response if key missing
-
-**Gemini calls failing?**
-- Verify `.env.local` has `GEMINI_API_KEY`
+**Gemma calls failing?**
+- Verify `.env.local` has `GEMMA_API_KEY`
 - Ensure billing/project access is enabled in Google AI Studio
+- If `gemma-4` is not yet available in your region, the client auto-falls back to `gemini-1.5-flash`
 
 **Translations failing?**
 - Static locales live in `data/locales/*.json`
@@ -256,13 +301,14 @@ Email updates via Resend
 
 ## 📈 Production Checklist
 
-- [ ] Set GROQ_API_KEY in Vercel
-- [ ] Enable HTTPS on Vercel (auto)
+- [ ] Set `GEMMA_API_KEY` in Vercel (Project Settings → Environment Variables)
+- [ ] Enable HTTPS on Vercel (automatic)
 - [ ] Test all pages load
-- [ ] Test clash detection works
-- [ ] Test PDF download
-- [ ] Test camera access (HTTPS required)
+- [ ] Test clash detection works (`/tender`)
+- [ ] Test PDF download (NIT generation)
+- [ ] Test camera access (AR page requires HTTPS)
 - [ ] Monitor build time (< 2 min)
+- [ ] Verify Gemma AI responses on `/dashboard` → "Run AI Brief"
 
 ## 🎯 Future Enhancements
 
